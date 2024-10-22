@@ -1944,8 +1944,8 @@ ol {
 	background: #111111;
 }
 
-.product__details__widget ul li .color__checkbox label .checkmark.grey-bg {
-	background: #e4aa8b;
+.product__details__widget ul li .color__checkbox label .checkmark.white-bg {
+	background: #f0ebeb;
 }
 
 .product__details__widget ul li .color__checkbox label .checkmark:after {
