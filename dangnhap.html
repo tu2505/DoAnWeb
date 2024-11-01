@@ -6,7 +6,8 @@
     <title>Đăng nhập</title>
     <link rel="stylesheet" href="/css/dangnhap.css">
 </head>
-<body>
+<body class="body">
+
     <div id="success-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
@@ -58,11 +59,13 @@
                 <div class="form sign-in">
                     <div class="input-group">
                         <i class='bx bxs-user'></i>
-                        <input type="text" placeholder="Tên đăng nhập">
+                        <input id="signInUserName" type="text" placeholder="Tên đăng nhập">
+                        <p class="error-login" style="visibility: hidden;">Không được để trống</p>
                     </div>
                     <div class="input-group">
                         <i class='bx bxs-lock-alt'></i>
-                        <input type="password" placeholder="Mật khẩu">
+                        <input id="signInPass" type="password" placeholder="Mật khẩu">
+                        <p class="error-login" style="visibility: hidden;">Không được để trống</p>
                     </div>
                     <button id="login-btn">
                         Đăng nhập
