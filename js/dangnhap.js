@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let loginBtn = document.getElementById('login-btn');
     let signUpBtn=document.getElementById('btn-signUp');
 
+    var userName=document.getElementById('signInUserName').value;
+    var password=document.getElementById('signInPass').value;
+
+    console.log(modal.querySelectorAll('.error-login'));
+
     modal.style.display='none'; 
 
     // Hàm toggle giữa sign-in và sign-up
