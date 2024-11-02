@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
 </head>
 
 <body>
@@ -79,8 +80,19 @@
                 <div class="col-lg-3">
                     <div class="header__right">
                         <div class="header__right__auth">
-                            <a href="/dangnhap.html">Đăng nhập</a>
+                            
+                            <a class="btn-signIn" href="/dangnhap.html">Đăng nhập</a>
+                            <div class="dropdown">
+                                <span class="dropdown-userName"></span>
+                                <div class="dropdown-content">
+                                    <a href="/shop-cart.html">Thông tin đơn hàng</a>
+                                    <a href="#" id="logoutBtn">Đăng xuất</a>
+                                </div>
+                            </div>
                         </div>
+
+                        
+
                         <ul class="header__right__widget">
                             <li><span class="icon_search search-switch"></span></li>
                             <li><a href="#"><span class="icon_heart_alt"></span>
@@ -623,6 +635,7 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/authen.js"></script>
 </body>
 
 </html>

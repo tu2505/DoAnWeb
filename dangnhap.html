@@ -23,21 +23,25 @@
                 <div class="form sign-up">
                     <div class="input-group">
                         <i class='bx bxs-user'></i>
-                        <input type="text" placeholder="Tên người dùng">
+                        <input id="signUpUserName" type="text" placeholder="Tên người dùng">
+                        <p class="error-signUp" >Không được để trống</p>
                     </div>
                     <div class="input-group">
                         <i class='bx bx-mail-send'></i>
-                        <input type="email" placeholder="Email">
+                        <input id="signUpEmail"  type="email" placeholder="Email">
+                        <p class="error-signUp" >Không được để trống</p>
                     </div>
                     <div class="input-group">
                         <i class='bx bxs-lock-alt'></i>
-                        <input type="password" placeholder="Mật khẩu">
+                        <input id="signUpPass" type="password" placeholder="Mật khẩu">
+                        <p class="error-signUp" >Không được để trống</p>
                     </div>
                     <div class="input-group">
                         <i class='bx bxs-lock-alt'></i>
-                        <input type="password" placeholder="Xác nhận mật khẩu">
+                        <input id="signUpConfirmPass" type="password" placeholder="Xác nhận mật khẩu">
+                        <p class="error-signUp" >Không được để trống</p>
                     </div>
-                    <button>
+                    <button id="btn-signUp">
                         Đăng ký
                     </button>
                     <p>
@@ -60,19 +64,17 @@
                     <div class="input-group">
                         <i class='bx bxs-user'></i>
                         <input id="signInUserName" type="text" placeholder="Tên đăng nhập">
-                        <p class="error-login" style="visibility: hidden;">Không được để trống</p>
+                        <p class="error-login">Không được để trống</p>
                     </div>
                     <div class="input-group">
                         <i class='bx bxs-lock-alt'></i>
                         <input id="signInPass" type="password" placeholder="Mật khẩu">
-                        <p class="error-login" style="visibility: hidden;">Không được để trống</p>
+                        <p class="error-login" >Không được để trống</p>
                     </div>
                     <button id="login-btn">
                         Đăng nhập
                     </button>
-                    <p>
-                        </b>
-                    </p>
+                    
                     <p>
                         <span>
                             Chưa có tài khoản ?
