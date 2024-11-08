@@ -1452,22 +1452,6 @@ ol {
 }
 
 .filter-range-wrap .range-slider .price-input:after {
-<<<<<<< HEAD
-	position: absolute;
-	left: 130px;
-	top: 12px;
-	height: 1px;
-	width: 5px;
-	background: #0d0d0d;
-	content: "";
-}
-
-.filter-range-wrap .range-slider .price-input input {
-	font-size: 16px;
-	color: #0d0d0d;
-	max-width: 50%;
-	border: none;
-=======
   position: absolute;
   left: 81px;
   top: 12px;
@@ -1482,7 +1466,6 @@ ol {
   color: #0d0d0d;
   max-width: 16%;
   border: none;
->>>>>>> d983b40ea20e20631e16e1d26c1f1775294d3df1
 }
 
 .filter-range-wrap .range-slider .price-input input:nth-child(1) {

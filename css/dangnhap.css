@@ -329,6 +329,14 @@ body {
     font-size: 20px;
 }
 
+.ok-btn{
+    background-color: #DB4437;
+    color: white;
+    margin-top: 20px; 
+    padding: 10px 15px;
+    border: none;
+}
+
 
 /* RESPONSIVE */
 
