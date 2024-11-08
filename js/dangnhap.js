@@ -94,7 +94,7 @@ function showSignInModal(email, password) {
                 modal.style.display = 'none';
 
                 //Chuyển hướng người dùng
-                window.location.href = 'index.html';
+                window.location.href = 'admin.html';
                 //Lưu giá trị vào local storage
                 localStorage.setItem('userName', 'Admin Tú');
 

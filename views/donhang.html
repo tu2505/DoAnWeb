@@ -31,11 +31,23 @@
     <meta name="twitter:description" content=""/>
     <meta name="twitter:image" content=""/>
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/Views/User/dest/style.min.css/"/>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/Views/User/dest/fonts.css"/>
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/header.css" type="text/css">
+    <link rel="stylesheet" href="/css/footer.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="/css/donhang.css"/>
+    
 </head>
 <style>
     .loader-container {
@@ -78,8 +90,61 @@
 <div class="loader-container">
     <div class="loader"></div>
 </div>
-<jsp:include page="component/Header.jsp"/>
-<jsp:include page="component/ModalLogin.jsp"/>
+
+<!-- Header Section Begin -->
+<header class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-3 col-lg-2">
+                <div class="header__logo">
+                    <a href="./index.html"><img src="/img/logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-7">
+                <nav class="header__menu">
+                    <ul>
+                        <li class="active"><a href="./index.html">Trang chủ</a></li>
+                        <li><a href="./nike.html">Nike</a></li>
+                        <li><a href="./adidas.html">Adidas</a></li>
+                        <li><a href="./jordan.html">Jordan</a></li>
+                        <li><a href="./shop-cart.html">Giỏ hàng</a></li>
+                        <li><a href="./checkout.html">Checkout</a></li>
+                        <li><a href="./contact.html">Liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-3">
+                <div class="header__right">
+                    <div class="header__right__auth">
+                        
+                        <a class="btn-signIn" href="/dangnhap.html">Đăng nhập</a>
+                        <div class="dropdown">
+                            <span class="dropdown-userName"></span>
+                            <div class="dropdown-content">
+                                <a href="/shop-cart.html">Thông tin đơn hàng</a>
+                                <a href="#" id="logoutBtn">Đăng xuất</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="header__right__widget">
+                        <li><span class="icon_search search-switch"></span></li>
+                        <li><a href="#"><span class="icon_heart_alt"></span>
+                            <div class="tip">2</div>
+                        </a></li>
+                        <li><a href="/dangnhap.html"><span class="icon_bag_alt"></span>
+                            <div class="tip">2</div>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="canvas__open">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+</header>
+<!-- Header Section End -->
 
 <main class="main">
     <section class="warp">
@@ -89,131 +154,297 @@
 
                 <div class="warp__order--list">
 
-                    <c:forEach var="order" items="${requestScope.customerOrderList}" varStatus="status">
+                    <div class="order--item">
+                        <div class="btns ">
 
-                        <div class="order--item">
-                            <div class="btns ">
+                            <div class="order__info">
+                                <span class="order__id">1</span>
+                                <p class="order__number">Tổng số sản phẩm:
+                                    <span>3</span>
+                                </p>
+                                <p class="order__date">Ngày đặt hàng: 2024-10-24</p>
+                                <p class="order__totalprice">Tổng tiền: 100.000 VNĐ</p>
+                                <p>Trạng thái: Đã mua thành công</p>
 
-                                <div class="order__info">
-                                    <span class="order__id">1</span>
-                                    <p class="order__number">Tổng số sản phẩm:
-                                        <span>${order.totalItemAmount()}</span>
-                                    </p>
-                                    <p class="order__date">Ngày đặt hàng:
-
-                                        <span><fmt:formatDate value="${order.date_purchase}"
-                                                              pattern="yyyy-MM-dd"/></span>
-
-                                            <fmt:formatNumber value="${order.total}" pattern="#,###"
-                                                              var="formattedTotal"/>
-                                    <p class="order__totalprice">Tổng tiền: <span>${formattedTotal}</span></p>
-                                    <p>Trạng thái:<span>${order.order_status.name}</span></p>
-
-                                </div>
-
-                                <div class="iconarrow">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em"
-                                         viewBox="0 0 512 512">
-                                        <path
-                                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="order--products">
-                                <c:forEach items="${order.orderDetailList}" var="orderDetail"
-                                           varStatus="status">
-
-                                    <c:set var="isSale" value="false"/>
-                                    <c:if test="${orderDetail.stockItem.item.sale.on_sale eq 1}">
-                                        <c:set var="isSale" value="true"/>
-                                    </c:if>
-
-
-                                    <div class="products--item">
-                                        <span class="number__product">${status.index+1}</span>
-                                        <img src="${orderDetail.stockItem.item.imageList.get(5).image_url}"
-                                             alt="ao-yame">
-                                        <p class="name__product">Tên:
-                                            <span>${orderDetail.stockItem.item.name}</span></p>
-                                        <p class="color__product">Màu:
-                                            <span>${orderDetail.stockItem.color}</span></p>
-
-                                        <c:if test="${isSale eq true}">
-                                            <c:set var="salePrice"
-                                                   value="${orderDetail.stockItem.item.price * (1-orderDetail.stockItem.item.sale.sale_percentage/100)}"/>
-                                            <fmt:formatNumber value="${salePrice}" pattern="#,###" var="formattedSalePrice"/>
-                                            <p class="price__product">Giá: <span>${formattedSalePrice}</span></p>
-                                        </c:if>
-                                        <c:if test="${isSale eq false}">
-                                            <fmt:formatNumber value="${orderDetail.stockItem.item.price}"
-                                                              pattern="#,###" var="formattedNumber"/>
-                                            <p class="price__product">Giá:
-                                                <span>${formattedNumber}</span></p>
-                                        </c:if>
-
-                                        <p>Số lượng: <span>${orderDetail.amount}</span></p>
-                                    </div>
-
-
-                                </c:forEach>
                             </div>
 
+                            <div class="iconarrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                     viewBox="0 0 512 512">
+                                    <path
+                                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </div>
                         </div>
 
-                    </c:forEach>
+                        <div class="order--products">
+                            <div class="products--item">
+                                <span class="number__product">1</span>
+                                <img src="/img/nike/shop-11.jpg"
+                                     alt="ao-yame">
+                                <p class="name__product">Tên:
+                                    <span>Nike</span></p>
+                                <p class="color__product">Màu:
+                                    <span>Đen</span></p>
+
+                                    <p class="price__product">Giá: 120.000 VNĐ</p>
+                                    <!-- <p class="price__product">Giá: 100.000 VNĐ</p> -->
+
+                                <p>Số lượng: 2</p>
+                            </div>
+
+                            <div class="products--item">
+                                <span class="number__product">1</span>
+                                <img src="/img/nike/shop-11.jpg"
+                                     alt="ao-yame">
+                                <p class="name__product">Tên:
+                                    <span>Nike</span></p>
+                                <p class="color__product">Màu:
+                                    <span>Đen</span></p>
+
+                                    <p class="price__product">Giá: 120.000 VNĐ</p>
+                                    <!-- <p class="price__product">Giá: 100.000 VNĐ</p> -->
+
+                                <p>Số lượng: 2</p>
+                            </div>
+                            
+                        </div>
+
+
+                    </div>
+
+                    <div class="order--item">
+                        <div class="btns ">
+
+                            <div class="order__info">
+                                <span class="order__id">1</span>
+                                <p class="order__number">Tổng số sản phẩm:
+                                    <span>3</span>
+                                </p>
+                                <p class="order__date">Ngày đặt hàng: 2024-10-24</p>
+                                <p class="order__totalprice">Tổng tiền: 100.000 VNĐ</p>
+                                <p>Trạng thái: Đã mua thành công</p>
+
+                            </div>
+
+                            <div class="iconarrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                     viewBox="0 0 512 512">
+                                    <path
+                                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="order--products">
+                            <div class="products--item">
+                                <span class="number__product">1</span>
+                                <img src="/img/nike/shop-11.jpg"
+                                     alt="ao-yame">
+                                <p class="name__product">Tên:
+                                    <span>Nike</span></p>
+                                <p class="color__product">Màu:
+                                    <span>Đen</span></p>
+
+                                    <p class="price__product">Giá: 120.000 VNĐ</p>
+                                    <!-- <p class="price__product">Giá: 100.000 VNĐ</p> -->
+
+                                <p>Số lượng: 2</p>
+                            </div>
+
+                            <div class="products--item">
+                                <span class="number__product">1</span>
+                                <img src="/img/nike/shop-11.jpg"
+                                     alt="ao-yame">
+                                <p class="name__product">Tên:
+                                    <span>Nike</span></p>
+                                <p class="color__product">Màu:
+                                    <span>Đen</span></p>
+
+                                    <p class="price__product">Giá: 120.000 VNĐ</p>
+                                    <!-- <p class="price__product">Giá: 100.000 VNĐ</p> -->
+
+                                <p>Số lượng: 2</p>
+                            </div>
+                            
+                        </div>
+
+
+                    </div>
 
                 </div>
             </div>
             <div class="warp__profile">
                 <h3 class="title --h4">Thông tin tài khoản</h3>
-                <form class="warp__profile--form" action="${pageContext.request.contextPath}/ProfileUserServlet"
+                <form class="warp__profile--form"
                       method="post">
                     <div class="box-form">
                         <div class="form-gr">
                             <span class="label" for="name-regis">Họ và tên</span>
                             <input class="input-form" type="text" name="name" id="name-regis"
-                                   placeholder="Nhập Họ và tên" value="${requestScope.signInCustomer.name}">
+                                   placeholder="Nhập Họ và tên" value="Nguyễn Văn A">
                             <p class="message-error error-name"></p>
                         </div>
                         <div class="form-gr">
                             <span class="label" for="phone-regis">Số điện thoại</span>
                             <input class="input-form" type="text" name="phoneNumber" id="phone-regis"
                                    placeholder="Nhập số điện thoại"
-                                   value="${requestScope.signInCustomer.phone_number}">
+                                   value="0908775615">
                             <p class="message-error error-name"></p>
                         </div>
                     </div>
                     <div class="form-gr">
                         <span class="label" for="email-regis">Email</span>
                         <input class="input-form" type="email" name="email" id="email-regis"
-                               placeholder="Nhập Email" value="${requestScope.signInCustomer.email}">
+                               placeholder="Nhập Email" value="khachhang@gmail.com">
                         <p class="message-error error-name"></p>
                     </div>
                     <div class="form-gr">
                         <span class="label" for="address-regis">Địa chỉ</span>
                         <input class="input-form" type="text" name="address" id="address-regis"
-                               placeholder="Nhập địa chỉ" value="${requestScope.signInCustomer.address}">
+                               placeholder="Nhập địa chỉ" value="266/76">
                         <p class="message-error error-name"></p>
                     </div>
                     <div class="form-gr">
                         <span class="label" for="password-regis">Mật khẩu</span>
                         <input class="input-form" type="password" name="password" id="password-regis"
-                               placeholder="Nhập mật khẩu" value="${requestScope.signInAccount.password}">
+                               placeholder="Nhập mật khẩu" value="123">
                         <p class="message-error error-name"></p>
                     </div>
                     <button type="submit" class="btn btn-yellow">Cập Nhật</button>
                     <input type="hidden" value="updateCustomerAndAccount" name="action">
 
-                    <input type="hidden" name="accountID" value="${requestScope.signInAccount.id}">
-                    <input type="hidden" name="customerID" value="${requestScope.signInCustomer.id}">
-
-
                 </form>
             </div>
         </div>
     </section>
+
+
 </main>
-<jsp:include page="component/Footer.jsp"/>
+
+
+<!-- Instagram Begin -->
+<div class="instagram">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div class="instagram__item set-bg" data-setbg="/img/instagram/2.jpg">
+                    <div class="instagram__text">
+                        <i class="fa fa-instagram"></i>
+                        <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div class="instagram__item set-bg" data-setbg="/img/instagram/6.jpg">
+                    <div class="instagram__text">
+                        <i class="fa fa-instagram"></i>
+                        <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div class="instagram__item set-bg" data-setbg="/img/instagram/9.jpg">
+                    <div class="instagram__text">
+                        <i class="fa fa-instagram"></i>
+                        <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div class="instagram__item set-bg" data-setbg="/img/instagram/11.png">
+                    <div class="instagram__text">
+                        <i class="fa fa-instagram"></i>
+                        <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div class="instagram__item set-bg" data-setbg="/img/instagram/15.jpg">
+                    <div class="instagram__text">
+                        <i class="fa fa-instagram"></i>
+                        <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div class="instagram__item set-bg" data-setbg="/img/instagram/7.jpg">
+                    <div class="instagram__text">
+                        <i class="fa fa-instagram"></i>
+                        <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Instagram End -->
+
+<!-- Footer Section Begin -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-7">
+                <div class="footer__about">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="/img/logo.png" alt=""></a>
+                    </div>
+                    <p>Trang web bán giày chuyên cung cấp các mẫu giày thời trang, đa dạng từ thể thao đến công sở. Sản phẩm đảm bảo chất lượng cao, với nhiều lựa chọn về kiểu dáng và kích cỡ phù hợp cho mọi lứa tuổi.</p>
+                    <div class="footer__payment">
+                        <a href="#"><img src="/img/payment/payment-1.png" alt=""></a>
+                        <a href="#"><img src="/img/payment/payment-2.png" alt=""></a>
+                        <a href="#"><img src="/img/payment/payment-3.png" alt=""></a>
+                        <a href="#"><img src="/img/payment/payment-4.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-5.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-5">
+                <div class="footer__widget">
+                    <h6>Quick links</h6>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="footer__widget">
+                    <h6>Account</h6>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Orders Tracking</a></li>
+                        <li><a href="#">Checkout</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-8 col-sm-8">
+                <div class="footer__newslatter">
+                    <div class="footer__social">
+                        <h6>Theo dõi chúng tôi tại</h6>
+                        <a href="https://www.facebook.com/BlueTuh" target="_blank"><i class="fa fa-facebook"></i></a>                        
+                        <a href="https://www.youtube.com/@bluetuhgaming2810" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                        <a href="https://www.instagram.com/minhla.tu/" target="_blank" ><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <div class="footer__copyright__text">
+                    <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                </div>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Section End -->
+
 <script>
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -227,8 +458,18 @@
 
 </script>
 <!-- Javascript -->
-<script src="${pageContext.request.contextPath}/Views/User/dest/jsmain.min.js"></script>
-<script src="${pageContext.request.contextPath}/Views/User/dest/main.js"></script>
+<script src="/js/donhang.js"></script>
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
+<script src="/js/mixitup.min.js"></script>
+<script src="/js/jquery.countdown.min.js"></script>
+<script src="/js/jquery.slicknav.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/jquery.nicescroll.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/authen.js"></script>
 </body>
 
 </html>
