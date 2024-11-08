@@ -176,20 +176,24 @@ Created: Colorib
 	var rangeSlider = $(".price-range"),
     minamount = $("#minamount"),
     maxamount = $("#maxamount"),
-    minPrice = rangeSlider.data('min'),
-    maxPrice = rangeSlider.data('max');
-    rangeSlider.slider({
+    minPrice = 1000000,  // Đặt giá trị tối thiểu là 1.000.000
+    maxPrice = 5000000;  // Đặt giá trị tối đa là 5.000.000
+
+rangeSlider.slider({
     range: true,
     min: minPrice,
     max: maxPrice,
     values: [minPrice, maxPrice],
     slide: function (event, ui) {
-        minamount.val('$' + ui.values[0]);
-        maxamount.val('$' + ui.values[1]);
-        }
-    });
-    minamount.val('$' + rangeSlider.slider("values", 0));
-    maxamount.val('$' + rangeSlider.slider("values", 1));
+        // Cập nhật các ô input với định dạng VNĐ
+        minamount.val(new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(ui.values[0]));
+        maxamount.val(new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(ui.values[1]));
+    }
+});
+
+// Hiển thị giá trị mặc định khi trang được load
+minamount.val(new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(rangeSlider.slider("values", 0)));
+maxamount.val(new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(rangeSlider.slider("values", 1)));
 
     /*------------------
 		Single Product
