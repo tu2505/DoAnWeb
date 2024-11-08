@@ -617,3 +617,64 @@ sup {
   font-size: 14px;
   margin-right: 5px;
 }
+
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table th, .order-table td {
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle; /* Căn giữa theo chiều dọc */
+}
+
+.order-table th {
+  font-weight: bold; /* In đậm tiêu đề */
+}
+
+/* Căn giữa hình ảnh theo chiều ngang và dọc */
+.order-table td.image-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-table td img {
+  width: 60px;
+  height: auto;
+}
+
+.order-table .number__product {
+  font-weight: bold;
+}
+
+.order-table .price__product {
+  color: #e91e63;
+  font-weight: bold;
+}
+
+/* Ngăn cách giữa tiêu đề và nội dung */
+.order-table thead tr {
+  border-bottom: 1px solid #ddd; /* Đường gạch ngang giữa tiêu đề và nội dung */
+}
+
+/* Ngăn cách giữa các dòng sản phẩm */
+.order-table tbody tr:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.order-table {
+  overflow: hidden;
+  max-height: 0; /* Bắt đầu với chiều cao 0 */
+  transition: max-height 0.3s ease-out; /* Hiệu ứng chuyển động mượt mà */
+}
+
+.order-table.open {
+  max-height: 1000px; /* Giới hạn chiều cao tối đa khi bảng mở */
+}
+
+.iconarrow {
+  cursor: pointer;
+}
