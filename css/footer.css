@@ -70,6 +70,7 @@
 
 .footer {
     padding-top: 55px;
+    font-family: "Montserrat", sans-serif;  
   }
   
   .footer__about {
@@ -78,6 +79,8 @@
   
   .footer__about p {
     margin-bottom: 20px;
+    font-size: 14px;
+    color: #666666;
   }
   
   .footer__logo {
@@ -103,6 +106,7 @@
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 12px;
+    font-size: 16px;
   }
   
   .footer__widget ul li {
@@ -124,6 +128,7 @@
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 25px;
+    font-size: 16px;
   }
   
   .footer__newslatter form {
@@ -194,6 +199,8 @@
   
   .footer__copyright__text p {
     margin-bottom: 0;
+    font-size: 14px;
+    color: #666666;
   }
   
   .footer__copyright__text a {
@@ -207,3 +214,11 @@
   .footer__copyright__text a:hover {
     color: #ca1515;
   }
+
+  .set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+
+  
