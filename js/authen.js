@@ -17,7 +17,7 @@ function checkSignIn() {
 
 function handleLogout() {
     localStorage.removeItem('userName');
-    window.location.reload();
+    window.location.href='index.html';
 
 }
 

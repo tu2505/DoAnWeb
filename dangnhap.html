@@ -8,10 +8,11 @@
 </head>
 <body class="body">
 
-    <div id="success-modal" class="modal">
+    <div id="modal" class="modal">
         <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <p>Đăng nhập thành công!</p>
+            <img id="modal-icon" src="img/icons8-yes-240.png" height="100px" width="100px" style="margin-bottom: 10px;"/>
+            <p id="modal-message">Bạn đã đăng nhập thành công!</p>
+            <button id="modal-closeBtn" class="ok-btn">OK</button>
         </div>
     </div>
 <div id="container" class="container">
@@ -28,7 +29,7 @@
                     </div>
                     <div class="input-group">
                         <i class='bx bx-mail-send'></i>
-                        <input id="signUpEmail"  type="email" placeholder="Email">
+                        <input id="signUpEmail"  type="text" placeholder="Email">
                         <p class="error-signUp" >Không được để trống</p>
                     </div>
                     <div class="input-group">
