@@ -531,6 +531,26 @@ ol {
   padding: 0 0 3px;
   display: inline-block;
 }
+.search-container {  
+  display: flex;  
+  justify-content: center;  
+  margin-top: 50px;  
+}  
+.search-bar {  
+  width: 300px;  
+  border: 2px solid #f1f1f1;  
+  border-radius: 5px;  
+  padding: 10px;  
+  font-size: 16px;  
+}  
+.search-button {  
+  margin-left: 10px;  
+  padding: 10px;  
+  color: #0d0d0d;  
+  border: none;  
+  border-radius: 5px;  
+  cursor: pointer;  
+}
 
 .banner__text a:after {
   position: absolute;
@@ -3262,7 +3282,7 @@ ol {
     bottom: 0;
   }
   .filter-range-wrap .range-slider .price-input input {
-    max-width: 27%;
+    max-width: 50%;
   }
   .filter-range-wrap .range-slider .price-input {
     margin-bottom: 20px;
