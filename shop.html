@@ -116,120 +116,109 @@
     <!-- Breadcrumb End -->
 
     <!-- Shop Section Begin -->
-    <section class="shop spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3">
-                    <div class="shop__sidebar">
-                        <div class="sidebar__categories">
-                            <div class="section-title">
-                                <h4>Bộ lọc</h4>
-                            </div>
-                            <div class="sidebar__sizes">
-                                <div class="section-title">
-                                    <h4>Hãng</h4>
-                                </div>
-                                <div class="size__list">
-                                    <label for="xxs">
-                                        Nike
-                                        <input type="checkbox" id="xxs">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label for="xs">
-                                        Adidas
-                                        <input type="checkbox" id="xs">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label for="xss">
-                                        Jordan
-                                        <input type="checkbox" id="xss">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                            </div>
+ <section class="shop spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3">
+                <div class="shop__sidebar">
+                    <div class="sidebar__categories">
+                        <div class="section-title">
+                            <h4>Categories</h4>
                         </div>
-                        <div class="sidebar__filter">
-                            <div class="section-title">
-                                <h4>Mua theo giá</h4>
-                            </div>
-                            <div class="filter-range-wrap">
-                                <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                                data-min="1.000.000 VND" data-max="5.000.000 VND"></div>
-                                <div class="range-slider">
-                                    <div class="price-input">
-                                        <p>Giá:</p>
-                                        <input type="text" id="minamount">
-                                        <input type="text" id="maxamount">
+                        <div class="categories__accordion">
+                            <div class="accordion" id="accordionExample">
+                                <div class="card">
+                                    <div class="card-heading active">
+                                        <a href="#collapseOne" data-toggle="collapse">Tất cả</a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><a href="./nike.html">Nike</a></li>
+                                                <li><a href="./adidas.html">Adidas</a></li>
+                                                <li><a href="./jordan.html">Jordan</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">Lọc</a>
                         </div>
-                        <div class="sidebar__sizes">
-                            <div class="section-title">
-                                <h4>Màu giày</h4>
-                            </div>
-                            <div class="size__list">
-                                <label for="xxs">
-                                    Trắng
-                                    <input type="checkbox" id="xxs">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="xs">
-                                    Đen
-                                    <input type="checkbox" id="xs">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="xss">
-                                    Xanh
-                                    <input type="checkbox" id="xss">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="s">
-                                    Đỏ
-                                    <input type="checkbox" id="s">
-                                    <span class="checkmark"></span>
+                    </div>
+                    <div class="sidebar__filter">
+                        <div class="section-title">
+                            <h4>Mua theo giá</h4>
+                        </div>
+                        <div class="filter-range-wrap">
+                            <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                            data-min="1.000.000 VND" data-max="5.000.000 VND"></div>
+                            <div class="range-slider">
+                                <div class="price-input">
+                                    <p>Giá:</p>
+                                    <input type="text" id="minamount">
+                                    <input type="text" id="maxamount">
+                                </div>
                             </div>
                         </div>
-                        <div class="sidebar__color">
-                            <div class="section-title">
-                                <h4>Cỡ giày</h4>
-                            </div>
-                            <div class="size__list color__list">
-                                <label for="black">
-                                    40
-                                    <input type="checkbox" id="black">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="whites">
-                                    41
-                                    <input type="checkbox" id="whites">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="reds">
-                                    42
-                                    <input type="checkbox" id="reds">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="greys">
-                                    43
-                                    <input type="checkbox" id="greys">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="blues">
-                                    44
-                                    <input type="checkbox" id="blues">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="beige">
-                                    45
-                                    <input type="checkbox" id="beige">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
+                        <a href="#">Lọc</a>
+                    </div>
+                    <div class="sidebar__sizes">
+                        <div class="section-title">
+                            <h4>Mua theo tên</h4>
+                        </div>
+                        <div class="search-container">  
+                            <input type="text" class="search-bar" placeholder="Tìm kiếm...">  
+                            <button class="search-button" onclick="window.open('shop.html', '_blank')">Tìm</button>
+                        </div>
+                    </div>
+                    <div class="sidebar__color">
+                        <div class="section-title">
+                            <h4>Màu giày</h4>
+                        </div>
+                        <div class="size__list color__list">
+                            <label for="black">
+                                Blacks
+                                <input type="checkbox" id="black">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="whites">
+                                Whites
+                                <input type="checkbox" id="whites">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="reds">
+                                Reds
+                                <input type="checkbox" id="reds">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="greys">
+                                Greys
+                                <input type="checkbox" id="greys">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="blues">
+                                Blues
+                                <input type="checkbox" id="blues">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="beige">
+                                Beige Tones
+                                <input type="checkbox" id="beige">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="greens">
+                                Greens
+                                <input type="checkbox" id="greens">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="yellows">
+                                Yellows
+                                <input type="checkbox" id="yellows">
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
                     </div>
                 </div>
+            </div>               
                 <div class="col-lg-9 col-md-9">
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
@@ -295,7 +284,7 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                     </div>
-                                    <div class="product__price">3.150.000 đ <span>4.500.000 đ</span></div>
+                                    <div class="product__price">3.155.000 đ</div>
                                 </div>
                             </div>
                         </div>
