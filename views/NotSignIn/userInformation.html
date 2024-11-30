@@ -147,67 +147,64 @@
 </header>
 <!-- Header Section End -->
 
-<main class="main">
-    <section class="warp">
-        <div class="container">
-            <div class="warp__order">
-                <h3 class="title --h4" style="padding-bottom: 5px; border-bottom: 1px solid #000000;">Đơn hàng đã mua</h3>
+<main class="main mb-5">
+    <div class="container mt-6">
 
-                <div class="warp__order--list">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="title --h4" style="padding-bottom: 5px; border-bottom: 1px solid #000000;">Thông tin người dùng</h3>
+                <div class="custom-card">
+                    <div class="card rounded-5 p-3" style="border-radius: 5px;">
 
-                    
-                    
-                    
-                    
+                        <form>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group mb-4">
+                                        <label for="nameInput">Họ và tên</label>
+                                        <input type="text" class="form-control form-control-custom" id="nameInput" aria-describedby="nameInputHelp" placeholder="Điền vào họ và tên" value="Nguyễn Văn A">
+                                      </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-gr mb-4">
+                                        <label for="phoneInput">Số điện thoại</label>
+                                        <input class="form-control form-control-custom" type="tel" name="phoneNumber" id="phoneInput" placeholder="Nhập số điện thoại" value="0908775615" pattern="[0-9]{10}" required>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group mb-4">
+                                <label for="emailInput">Email</label>
+                                <input type="email" class="form-control form-control-custom" id="emailInput" placeholder="name@gmail.com" value="test@gmail.com">
+                            </div>
+    
+                            <div class="form-group mb-4">
+                                <label for="addressInput">Địa chỉ</label>
+                                <input type="text" class="form-control form-control-custom" id="nameInput" aria-describedby="emailInputHelp" placeholder="Điền vào địa chỉ" value="100/26 Tôn Thất Thành">
+                              </div>
+    
+                              <div class="form-group mb-4">
+                                <label for="passInput">Mật khẩu</label>
+                                <input type="password" class="form-control form-control-custom" id="passInput" aria-describedby="passInputHelp" placeholder="Điền vào mật khẩu" value="0123554">
+                              </div>
+    
+                              <button type="submit" class="btn btn-update w-100 text-white">Cập Nhật</button>
+    
+                        </form>
+
+                    </div>
+                
 
                 </div>
-            </div>
-            <div class="warp__profile">
-                <h3 class="title --h4">Thông tin tài khoản</h3>
-                <form class="warp__profile--form"
-                      method="post">
-                    <div class="box-form">
-                        <div class="form-gr">
-                            <span class="label" for="name-regis">Họ và tên</span>
-                            <input class="input-form" type="text" name="name" id="name-regis"
-                                   placeholder="Nhập Họ và tên" value="Nguyễn Văn A">
-                            <p class="message-error error-name"></p>
-                        </div>
-                        <div class="form-gr">
-                            <span class="label" for="phone-regis">Số điện thoại</span>
-                            <input class="input-form" type="text" name="phoneNumber" id="phone-regis"
-                                   placeholder="Nhập số điện thoại"
-                                   value="0908775615">
-                            <p class="message-error error-name"></p>
-                        </div>
-                    </div>
-                    <div class="form-gr">
-                        <span class="label" for="email-regis">Email</span>
-                        <input class="input-form" type="email" name="email" id="email-regis"
-                               placeholder="Nhập Email" value="khachhang@gmail.com">
-                        <p class="message-error error-name"></p>
-                    </div>
-                    <div class="form-gr">
-                        <span class="label" for="address-regis">Địa chỉ</span>
-                        <input class="input-form" type="text" name="address" id="address-regis"
-                               placeholder="Nhập địa chỉ" value="266/76">
-                        <p class="message-error error-name"></p>
-                    </div>
-                    <div class="form-gr">
-                        <span class="label" for="password-regis">Mật khẩu</span>
-                        <input class="input-form" type="password" name="password" id="password-regis"
-                               placeholder="Nhập mật khẩu" value="123">
-                        <p class="message-error error-name"></p>
-                    </div>
-                    <button type="submit" class="btn btn-yellow">Cập Nhật</button>
-                    <input type="hidden" value="updateCustomerAndAccount" name="action">
 
-                </form>
+                
+                
             </div>
+            
+    
         </div>
-    </section>
 
-
+    </div>
+    
 </main>
 
 
