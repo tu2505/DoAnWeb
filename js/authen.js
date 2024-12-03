@@ -15,10 +15,9 @@
 //     }
 // }
 
-// function handleLogout() {
-//     localStorage.removeItem('userName');
-//     window.location.href='index.html';
-// }
+function handleLogout() {
+    window.location.href='/index.html';
+}
 
 // checkSignIn();
 
