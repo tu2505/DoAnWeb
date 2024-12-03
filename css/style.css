@@ -1473,7 +1473,7 @@ ol {
 
 .filter-range-wrap .range-slider .price-input:after {
   position: absolute;
-  left: 81px;
+  left: 160px;
   top: 12px;
   height: 1px;
   width: 5px;
@@ -1484,7 +1484,7 @@ ol {
 .filter-range-wrap .range-slider .price-input input {
   font-size: 16px;
   color: #0d0d0d;
-  max-width: 16%;
+  max-width: 70%;
   border: none;
 }
 
@@ -3757,4 +3757,27 @@ ol {
     width: 100%;
     font-size: 24px;
   }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .required::after {
+    content: " *";
+    color: red;
+  }  
 }
