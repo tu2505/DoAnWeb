@@ -191,7 +191,7 @@
   /* CSS cho container dropdown */
 .dropdown {
     position: relative;
-    display: none;
+    display: block;
     cursor: pointer;
     font-size: 16px;
     color: #333;

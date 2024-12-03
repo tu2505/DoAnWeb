@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="/css/header.css" type="text/css">
-    <link rel="stylesheet" href="/css/donhang.css"/>
+    <link rel="stylesheet" href="/css/chitietdonhang.css"/>
     <link rel="stylesheet" href="/css/footer.css" type="text/css">  
     
 </head>
@@ -117,15 +117,15 @@
                 <div class="header__right">
                     <div class="header__right__auth">
                         
-                        <a class="btn-signIn" href="/dangnhap.html">Đăng nhập</a>
                         <div class="dropdown">
-                            <span class="dropdown-userName"></span>
+                            <span class="dropdown-userName">Xin chào Nguyễn Văn A</span>
                             <div class="dropdown-content">
-                                <a href="/shop-cart.html">Thông tin đơn hàng</a>
-                                <a href="donhang.html">Lịch sử mua hàng</a>
-                                <a href="#" id="logoutBtn">Đăng xuất</a>
+                                <a href="/views/SignIn/userInformation.html ">Thông tin cá nhân</a>
+                                <a href="/views/SignIn/thongtindonhang.html">Thông tin đơn hàng</a>
+                                <a href="#" id="logoutBtn" onclick="handleLogout()">Đăng xuất</a>
                             </div>
                         </div>
+                        
                     </div>
 
                     <ul class="header__right__widget">
@@ -148,81 +148,170 @@
 <!-- Header Section End -->
 
 <main class="main mb-5">
-    <div class="container mt-6">
+    
+    <div class="container">
 
         <div class="row">
             <div class="col-12">
-                <h3 class="title --h4" style="padding-bottom: 5px; border-bottom: 1px solid #000000;">Thông tin người dùng</h3>
                 <div class="custom-card">
+                    <h1 class="h1 mb-3 mt-3 text-dark">Số đơn hàng: Ashion001</h1>
+                    <div class="card rounded-5 p-3" style="display: 16px; border-radius: 5px;">
+                        <p>Ngày đặt hàng: 25/01/2024</p>
+                        <p>Trạng thái: <b class="mark-success">Đơn hàng giao thành công</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="custom-card">
+                    <h4 class="h1 mt-3 mb-3">Thông tin Người nhận hàng</h4>
                     <div class="card rounded-5 p-3" style="border-radius: 5px;">
+                        <table class="table table-borderless" style="font-size:16px;">
+                            <tbody>
+                            <tr>
+                                <td>Tên</td>
+                                <td>Đỗ Ngọc Lương Tuấn</td>
+                            </tr>
+                            <tr>
+                                <td>Điện thoại</td>
+                                <td>0908773513</td>
+                            </tr>
+                            <tr>
+                                <td>Địa chỉ nhận hàng</td>
+                                <td>109/15, Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>nguyenvana@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>Hình thức thanh toán</td>
+                                <td>Chuyển khoản</td>
+                            </tr>
+                            <tr>
+                                <td>Ghi chú</td>
+                                <td>
+                                    Không có
+                                </td>
+                            </tr>
 
-                        <form>
+                        </tbody></table>
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="col-12">
+                <div class="custom-card">
+                    <h4 class="h1 mt-3 mb-3">Chi tiết đơn hàng</h4>
+                    <div class="card rounded-5 p-3" style="border-radius: 5px;">
+                        <div class="card-body" style="padding: 16px;">
                             <div class="row">
-                                <div class="col-6">
-                                    <div class="form-group mb-4">
-                                        <label for="nameInput">Họ và tên</label>
-                                        <input type="text" class="form-control form-control-custom" id="nameInput" aria-describedby="nameInputHelp" placeholder="Điền vào họ và tên" value="Nguyễn Văn A">
-                                      </div>
+                                <div class="col-7">
+                                    <div class="row d-flex align-items-center">
+                                        <img src="/img/nike/shop-10.jpg" width="80" height="80">
+                                        <div class="ml-5">
+                                            <br><b>Nike Interact Run</b></br>
+                                            Đen, Free Size
+                                        </div>
+                                    </div>
+                                    
                                 </div>
-                                <div class="col-6">
-                                    <div class="form-gr mb-4">
-                                        <label for="phoneInput">Số điện thoại</label>
-                                        <input class="form-control form-control-custom" type="tel" name="phoneNumber" id="phoneInput" placeholder="Nhập số điện thoại" value="0908775615" pattern="[0-9]{10}" required>
+    
+                                <div class="col-5 d-flex align-items-center justify-content-end">
+                                    <div>
+                                        <br><b>2.349.000 VNĐ</b></br>
+                                        Số lượng : 1
                                     </div>
                                 </div>
                             </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="row d-flex align-items-center">
+                                        <img src="/img/nike/shop-18.jpg" width="80" height="80">
+                                        <div class="ml-5">
+                                            <br><b>Air Jordan 1 Low</b></br>
+                                            Đen, 42
+                                        </div>
+                                    </div>
+                                    
+                                </div>
     
-                            <div class="form-group mb-4">
-                                <label for="emailInput">Email</label>
-                                <input type="email" class="form-control form-control-custom" id="emailInput" placeholder="name@gmail.com" value="test@gmail.com">
+                                <div class="col-5 d-flex align-items-center justify-content-end">
+                                    <div>
+                                        <br><b>4.409.000 VNĐ</b></br>
+                                        Số lượng : 1
+                                    </div>
+                                </div>
+    
+                                
                             </div>
-    
-                            <div class="form-group mb-4">
-                                <label for="addressInput">Địa chỉ</label>
-                                <input type="text" class="form-control form-control-custom" id="nameInput" aria-describedby="emailInputHelp" placeholder="Điền vào địa chỉ" value="100/26 Tôn Thất Thành">
-                              </div>
-    
-                              <div class="form-group mb-4">
-                                <label for="passInput">Mật khẩu</label>
-                                <input type="password" class="form-control form-control-custom" id="passInput" aria-describedby="passInputHelp" placeholder="Điền vào mật khẩu" value="0123554">
-                              </div>
-                              
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-update w-100 text-white" data-toggle="modal" data-target="#exampleModalCenter">
-                                Cập Nhật
-                            </button>
 
-                        </form>
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="row d-flex align-items-center">
+                                        <img src="/img/nike/shop-13.jpg" width="80" height="80">
+                                        <div class="ml-5">
+                                            <br><b>Air Jordan 4 RM</b></br>
+                                            Đen, 42
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+    
+                                <div class="col-5 d-flex align-items-center justify-content-end">
+                                    <div>
+                                        <br><b>3.239.000 VNĐ</b></br>
+                                        Số lượng : 1
+                                    </div>
+                                </div>
+    
+                                
+                            </div>
 
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="row d-flex align-items-center">
+                                        <img src="/img/nike/shop-17.jpg" width="80" height="80">
+                                        <div class="ml-5">
+                                            <br><b>Nike Air Max DN</b></br>
+                                            Đen, 42
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+    
+                                <div class="col-5 d-flex align-items-center justify-content-end">
+                                    <div>
+                                        <br><b>4.409.000 VNĐ</b></br>
+                                        Số lượng : 1
+                                    </div>
+                                </div>
+    
+                                
+                            </div>
+
+    
+                            <div class="row mt-5">
+                                <div class="col-1 text-start"><b>Ghi chú:</b></div>
+                                <div class="col-6 text-start">Không có</div>
+                                <div class="col-5 text-right">
+                                    <div class="mb-3">Tổng giá trị sản phẩm: <b>14.406.000 VNĐ</b></div>
+                                    <div class="mb-3">Giảm giá: <b>100.000 VNĐ</b></div>
+                                    <div class="mb-3">Phí vận chuyển: <b>100.000 VNĐ</b></div>
+                                    <div class="mb-3">Tổng hóa đơn: <b>14.406.000 VNĐ</b></div>
+                                    <div class="mb-3">Đã thanh toán: <b>14.406.000 VNĐ</b></div>
+                                    <hr>
+                                    <b>Tổng phải trả: 0 VNĐ</b>
+            
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                
-
                 </div>
-
-                
                 
             </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <image class="modal-title" id="exampleModalLongTitle" src="/img/icons8-yes-240.png" width="80" height="80"></image>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size: 50px; line-height: 1; padding: 0.5rem;">
-            <span aria-hidden="true" style="font-size: 50px;">&times;</span>
-        </button>
         
-        </div>
-        <div class="modal-body text-dark mt-5 mb-5 ml-5">
-          Cập nhật thông tin thành công
-        </div>
-        <div class="modal-footer bg-light">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" style="font-size: 20px;">Đồng ý</button>
-        </div>
-      </div>
-    </div>
-  </div>
         </div>
 
     </div>
@@ -365,7 +454,6 @@
 
 </script>
 <!-- Javascript -->
-<script src="/js/donhang.js"></script>
 <script src="/js/jquery-3.3.1.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/jquery.magnific-popup.min.js"></script>
