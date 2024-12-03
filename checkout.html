@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/header.css" type="text/css">
+    
 </head>
 
 <body>
@@ -30,6 +32,8 @@
     <div id="preloder">
         <div class="loader"></div>
     </div>
+
+    
 
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
@@ -78,7 +82,14 @@
                 <div class="col-lg-3">
                     <div class="header__right">
                         <div class="header__right__auth">
-                            <a href="./dangnhap.html">Đăng nhập</a>
+                            <div class="dropdown">
+                                <span class="dropdown-userName">Xin chào Nguyễn Văn A</span>
+                                <div class="dropdown-content">
+                                    <a href="/views/SignIn/userInformation.html ">Thông tin cá nhân</a>
+                                    <a href="/views/SignIn/thongtindonhang.html">Thông tin đơn hàng</a>
+                                    <a href="#" id="logoutBtn" onclick="handleLogout()">Đăng xuất</a>
+                                </div>
+                            </div>
                         </div>
                         <ul class="header__right__widget">
                             <li><span class="icon_search search-switch"></span></li>
@@ -212,14 +223,36 @@
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
-                                <button type="submit" class="site-btn">Giao hàng</button>
+                                <button type="button" class="site-btn" data-toggle="modal" data-target="#exampleModalCenter">Giao hàng</button>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
+
+            <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <image class="modal-title" id="exampleModalLongTitle" src="/img/icons8-yes-240.png" width="80" height="80"></image>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size: 50px; line-height: 1; padding: 0.5rem;">
+                        <span aria-hidden="true" style="font-size: 50px;">&times;</span>
+                    </button>
+                </div>
+            <div class="modal-body text-dark mt-2 mb-2 ml-2">
+                Đơn hàng Ashion001 đặt thành công
+            </div>
+            <div class="modal-footer bg-light">
+                <a class="btn btn-secondary" style="font-size: 20px;" href="/views/SignIn/signInIndex.html">Đồng ý</a>
+            </div>
+            
+      </div>
+    </div>
         </section>
         <!-- Checkout Section End -->
+
+        
 
         <!-- Instagram Begin -->
         <div class="instagram">

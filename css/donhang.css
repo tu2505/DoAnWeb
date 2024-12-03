@@ -3,7 +3,7 @@
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: 'Montserrat';
   vertical-align: baseline;
   box-sizing: border-box;
 }
@@ -50,6 +50,7 @@ table {
 }
 
 :root {
+  font-family: 'Montserrat';
   --gap: 30px;
   --max-width-page: 2560px;
   --max-width-container-fluid: 1920px;
@@ -284,7 +285,7 @@ sup {
   }
   .profilepage .warp__order--list .order--item .btns .order__info {
     display: flex;
-    gap: 35px;
+    gap: 30px;
   }
   .profilepage .warp__order--list .order--item .btns .order__info p span {
     color: var(--blue-cl);
@@ -446,6 +447,11 @@ sup {
     background: var(--yellow-cl);
     font-family: "Montserrat", sans-serif;  
     font-size: medium;
+  }
+
+  .btn-update{
+    background-color: #0069D9;
+    font-size: 16px;
   }
 
 
@@ -620,8 +626,15 @@ sup {
 
 
 .order-table {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
   width: 100%;
   border-collapse: collapse;
+}
+
+.order-table.open {
+  max-height: none; /* Cho phép bảng mở hoàn toàn mà không giới hạn */
 }
 
 .order-table th, .order-table td {
@@ -678,3 +691,42 @@ sup {
 .iconarrow {
   cursor: pointer;
 }
+
+/* Lớp success: Màu xanh lá cây, cho thành công */
+.mark-success {
+  background-color: #28a745; /* Màu xanh lá cây */
+  color: white; /* Màu chữ trắng */
+}
+
+/* Lớp cancel: Màu đỏ, cho bị hủy */
+.mark-cancel {
+  background-color: #dc3545; /* Màu đỏ */
+  color: white; /* Màu chữ trắng */
+}
+
+/* Lớp failure: Màu cam, cho thất bại */
+.mark-failure {
+  background-color: #ffc107; /* Màu vàng cam */
+  color: white; /* Màu chữ đen */
+}
+
+.mt-6 {
+  margin-top: 6rem; /* Tăng gấp đôi giá trị của $spacer */
+}
+
+.form-control-custom {
+  border: 1px solid var(--grayop-cl);
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+  width: 100%;
+  font-size: 16px;
+  color: #111111;
+}
+
+.custom-card {
+  background-color: #FAFAFA;
+  border-radius: 5px;
+  padding: 15px;
+}
+
