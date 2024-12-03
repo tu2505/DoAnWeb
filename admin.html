@@ -87,8 +87,7 @@
           <div class="col-lg-3">
             <div class="header__right">
               <div class="header__right__auth">
-                <a href="#">Login</a>
-                <a href="#">Register</a>
+                <a href="#">Đăng nhập</a>
               </div>
               <ul class="header__right__widget">
                 <li><span class="icon_search search-switch"></span></li>
@@ -150,7 +149,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr id="item">
                     <td class="cart__product__item">
                       <img
                         src="img/nike/shop-17.jpg"
@@ -177,7 +176,7 @@
                     <td class="cart__edit">
                       <a href="./product-details.html"><span class="icon_pencil"></span></a>
                     </td>
-                    <td class="cart__close">
+                    <td class="cart__close" onclick="deleteItem()">
                       <span class="icon_close"></span>
                     </td>
                   </tr>
