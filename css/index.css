@@ -1,7 +1,6 @@
 /* CSS cho container dropdown */
 .dropdown {
     position: relative;
-    display: none;
     cursor: pointer;
     font-size: 16px;
     color: #333;

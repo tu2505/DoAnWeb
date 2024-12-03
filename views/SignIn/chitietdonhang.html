@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0 , maximum-scale=1.0, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Bán Giày</title>
+
+    <meta name="title" content="Kiet Rider"/>
+    <meta name="description" content=""/>
+    <meta name="keyword" content=""/>
+
+    <link rel="canonical" href="https://cfdcircle.vn"/>
+    <link rel="icon" href="favicon.ico"/>
+
+    <!-- Meta Tag Facebook -->
+    <meta property="og:locale" content="en"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Kiet Rider"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content="Kiet Rider"/>
+    <meta property="og:image" content=""/>
+
+    <!-- Meta Tag Twitter -->
+    <meta name="twitter:card" content=""/>
+    <meta name="twitter:site" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:description" content=""/>
+    <meta name="twitter:image" content=""/>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/header.css" type="text/css">
+    <link rel="stylesheet" href="/css/chitietdonhang.css"/>
+    <link rel="stylesheet" href="/css/footer.css" type="text/css">  
+    
+</head>
+<style>
+    .loader-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f1f1f1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+
+    .loader {
+        border: 16px solid var(--main-cl);
+        border-top: 16px solid #ffffff;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* Hide loader when content is loaded */
+    .loader-container.loaded {
+        display: none;
+    }
+</style>
+<body class="profilepage">
+<div class="loader-container">
+    <div class="loader"></div>
+</div>
+
+<!-- Header Section Begin -->
+<header class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-3 col-lg-2">
+                <div class="header__logo">
+                    <a href="/index.html"><img src="/img/logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-7">
+                <nav class="header__menu">
+                    <ul>
+                        <li class="active"><a href="/index.html">Trang chủ</a></li>
+                        <li><a href="/nike.html">Nike</a></li>
+                        <li><a href="/adidas.html">Adidas</a></li>
+                        <li><a href="/jordan.html">Jordan</a></li>
+                        <li><a href="/shop-cart.html">Giỏ hàng</a></li>
+                        <li><a href="/checkout.html">Checkout</a></li>
+                        <li><a href="/contact.html">Liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-3">
+                <div class="header__right">
+                    <div class="header__right__auth">
+                        
+                        <div class="dropdown">
+                            <span class="dropdown-userName">Xin chào Nguyễn Văn A</span>
+                            <div class="dropdown-content">
+                                <a href="/views/SignIn/userInformation.html ">Thông tin cá nhân</a>
+                                <a href="/views/SignIn/thongtindonhang.html">Thông tin đơn hàng</a>
+                                <a href="#" id="logoutBtn" onclick="handleLogout()">Đăng xuất</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <ul class="header__right__widget">
+                        <li><span class="icon_search search-switch"></span></li>
+                        <li><a href="#"><span class="icon_heart_alt"></span>
+                            <div class="tip">2</div>
+                        </a></li>
+                        <li><a href="/dangnhap.html"><span class="icon_bag_alt"></span>
+                            <div class="tip">2</div>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="canvas__open">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+</header>
+<!-- Header Section End -->
+
+<main class="main mb-5">
+    
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="custom-card">
+                    <h1 class="h1 mb-3 mt-3 text-dark">Số đơn hàng: Ashion001</h1>
+                    <div class="card rounded-5 p-3" style="display: 16px; border-radius: 5px;">
+                        <p>Ngày đặt hàng: 25/01/2024</p>
+                        <p>Trạng thái: <b class="mark-success">Đơn hàng giao thành công</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="custom-card">
+                    <h4 class="h1 mt-3 mb-3">Thông tin Người nhận hàng</h4>
+                    <div class="card rounded-5 p-3" style="border-radius: 5px;">
+                        <table class="table table-borderless" style="font-size:16px;">
+                            <tbody>
+                            <tr>
+                                <td>Tên</td>
+                                <td>Đỗ Ngọc Lương Tuấn</td>
+                            </tr>
+                            <tr>
+                                <td>Điện thoại</td>
+                                <td>0908773513</td>
+                            </tr>
+                            <tr>
+                                <td>Địa chỉ nhận hàng</td>
+                                <td>109/15, Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>nguyenvana@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>Hình thức thanh toán</td>
+                                <td>Chuyển khoản</td>
+                            </tr>
+                            <tr>
+                                <td>Ghi chú</td>
+                                <td>
+                                    Không có
+                                </td>
+                            </tr>
+
+                        </tbody></table>
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="col-12">
+                <div class="custom-card">
+                    <h4 class="h1 mt-3 mb-3">Chi tiết đơn hàng</h4>
+                    <div class="card rounded-5 p-3" style="border-radius: 5px;">
+                        <div class="card-body" style="padding: 16px;">
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="row d-flex align-items-center">
+                                        <img src="/img/nike/shop-10.jpg" width="80" height="80">
+                                        <div class="ml-5">
+                                            <br><b>Nike Interact Run</b></br>
+                                            Đen, Free Size
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+    
+                                <div class="col-5 d-flex align-items-center justify-content-end">
+                                    <div>
+                                        <br><b>2.349.000 VNĐ</b></br>
+                                        Số lượng : 1
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="row d-flex align-items-center">
+                                        <img src="/img/nike/shop-18.jpg" width="80" height="80">
+                                        <div class="ml-5">
+                                            <br><b>Air Jordan 1 Low</b></br>
+                                            Đen, 42
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+    
+                                <div class="col-5 d-flex align-items-center justify-content-end">
+                                    <div>
+                                        <br><b>4.409.000 VNĐ</b></br>
+                                        Số lượng : 1
+                                    </div>
+                                </div>
+    
+                                
+                            </div>
+
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="row d-flex align-items-center">
+                                        <img src="/img/nike/shop-13.jpg" width="80" height="80">
+                                        <div class="ml-5">
+                                            <br><b>Air Jordan 4 RM</b></br>
+                                            Đen, 42
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+    
+                                <div class="col-5 d-flex align-items-center justify-content-end">
+                                    <div>
+                                        <br><b>3.239.000 VNĐ</b></br>
+                                        Số lượng : 1
+                                    </div>
+                                </div>
+    
+                                
+                            </div>
+
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="row d-flex align-items-center">
+                                        <img src="/img/nike/shop-17.jpg" width="80" height="80">
+                                        <div class="ml-5">
+                                            <br><b>Nike Air Max DN</b></br>
+                                            Đen, 42
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+    
+                                <div class="col-5 d-flex align-items-center justify-content-end">
+                                    <div>
+                                        <br><b>4.409.000 VNĐ</b></br>
+                                        Số lượng : 1
+                                    </div>
+                                </div>
+    
+                                
+                            </div>
+
+    
+                            <div class="row mt-5">
+                                <div class="col-1 text-start"><b>Ghi chú:</b></div>
+                                <div class="col-6 text-start">Không có</div>
+                                <div class="col-5 text-right">
+                                    <div class="mb-3">Tổng giá trị sản phẩm: <b>14.406.000 VNĐ</b></div>
+                                    <div class="mb-3">Giảm giá: <b>100.000 VNĐ</b></div>
+                                    <div class="mb-3">Phí vận chuyển: <b>100.000 VNĐ</b></div>
+                                    <div class="mb-3">Tổng hóa đơn: <b>14.406.000 VNĐ</b></div>
+                                    <div class="mb-3">Đã thanh toán: <b>14.406.000 VNĐ</b></div>
+                                    <hr>
+                                    <b>Tổng phải trả: 0 VNĐ</b>
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        
+        </div>
+
+    </div>
+    
+</main>
+
+
+<!-- Instagram Begin -->
+<div class="instagram">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div class="instagram__item set-bg" data-setbg="/img/instagram/2.jpg">
+                    <div class="instagram__text">
+                        <i class="fa fa-instagram"></i>
+                        <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div class="instagram__item set-bg" data-setbg="/img/instagram/6.jpg">
+                    <div class="instagram__text">
+                        <i class="fa fa-instagram"></i>
+                        <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div class="instagram__item set-bg" data-setbg="/img/instagram/9.jpg">
+                    <div class="instagram__text">
+                        <i class="fa fa-instagram"></i>
+                        <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div class="instagram__item set-bg" data-setbg="/img/instagram/11.png">
+                    <div class="instagram__text">
+                        <i class="fa fa-instagram"></i>
+                        <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div class="instagram__item set-bg" data-setbg="/img/instagram/15.jpg">
+                    <div class="instagram__text">
+                        <i class="fa fa-instagram"></i>
+                        <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div class="instagram__item set-bg" data-setbg="/img/instagram/7.jpg">
+                    <div class="instagram__text">
+                        <i class="fa fa-instagram"></i>
+                        <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Instagram End -->
+
+<!-- Footer Section Begin -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-7">
+                <div class="footer__about">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="/img/logo.png" alt=""></a>
+                    </div>
+                    <p>Trang web bán giày chuyên cung cấp các mẫu giày thời trang, đa dạng từ thể thao đến công sở. Sản phẩm đảm bảo chất lượng cao, với nhiều lựa chọn về kiểu dáng và kích cỡ phù hợp cho mọi lứa tuổi.</p>
+                    <div class="footer__payment">
+                        <a href="#"><img src="/img/payment/payment-1.png" alt=""></a>
+                        <a href="#"><img src="/img/payment/payment-2.png" alt=""></a>
+                        <a href="#"><img src="/img/payment/payment-3.png" alt=""></a>
+                        <a href="#"><img src="/img/payment/payment-4.png" alt=""></a>
+                        <a href="#"><img src="/img/payment/payment-5.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-5">
+                <div class="footer__widget">
+                    <h6>Quick links</h6>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="footer__widget">
+                    <h6>Account</h6>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Orders Tracking</a></li>
+                        <li><a href="#">Checkout</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-8 col-sm-8">
+                <div class="footer__newslatter">
+                    <div class="footer__social">
+                        <h6>Theo dõi chúng tôi tại</h6>
+                        <a href="https://www.facebook.com/BlueTuh" target="_blank"><i class="fa fa-facebook"></i></a>                        
+                        <a href="https://www.youtube.com/@bluetuhgaming2810" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                        <a href="https://www.instagram.com/minhla.tu/" target="_blank" ><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <div class="footer__copyright__text">
+                    <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                </div>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Section End -->
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Simulate loading delay (you can remove this in production)
+        setTimeout(function () {
+            // Add loaded class to hide the loader
+            document.querySelector('.loader-container').classList.add('loaded');
+        }, 2000); // Adjust the timeout based on your loading time
+    });
+
+
+</script>
+<!-- Javascript -->
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
+<script src="/js/mixitup.min.js"></script>
+<script src="/js/jquery.countdown.min.js"></script>
+<script src="/js/jquery.slicknav.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/jquery.nicescroll.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/authen.js"></script>
+</body>
+
+</html>
