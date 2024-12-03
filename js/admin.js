@@ -1,18 +1,45 @@
-var data = [];
+// Hàm onClick cho nút Delete Item
+function deleteItem(itemId) {
+  console.log(`deleteItem called with ID: ${itemId}`);
 
-function add() {
-  var item_name = document.getElementById("cart__product__item").value;
-  item_price = document.getElementById("cart__price").value;
-  item_quantity = document.getElementById("cart__quantity").value;
+  // Kiểm tra đầu vào
+  if (!itemId) {
+    console.error("Invalid item ID!");
+    return;
+  }
 
-  var item = {
-    Name: item_name,
-    price: item_price,
-    quantity: item_quantity,
-  };
-  data.push(item);
-}
+  // Hiển thị hộp thoại xác nhận trước khi xóa
+  const confirmDelete = confirm("Are you sure you want to delete this item?");
 
-function deleteItem() {
-  document.getElementById("item").remove("active");
+  if (confirmDelete) {
+    // Tìm phần tử trong DOM
+    const itemElement = document.querySelector(`tr[data-item-id="${itemId}"]`);
+    if (itemElement) {
+      console.log("Item element found in DOM:", itemElement);
+
+      // Gửi yêu cầu xóa tới server
+      fetch(`/api/items/${itemId}`, {
+        method: "DELETE",
+      })
+        .then((response) => {
+          if (response.ok) {
+            alert("Item successfully deleted.");
+            // Xóa mục khỏi giao diện
+            itemElement.remove();
+          } else {
+            console.error("Failed to delete item on the server.");
+            alert("Failed to delete the item.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error during fetch:", error);
+          alert("An error occurred. Please try again later.");
+        });
+    } else {
+      console.warn("Item element not found in DOM.");
+      alert("Item not found.");
+    }
+  } else {
+    console.log("Deletion canceled by the user.");
+  }
 }

@@ -8,6 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Ashion with Fashion</title>
 
+    <!-- Javascript -->
+    <script src="js/admin.js"></script>
+
     <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
@@ -149,7 +152,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr id="item">
+                  <tr data-item-id="1">
                     <td class="cart__product__item">
                       <img
                         src="img/nike/shop-17.jpg"
@@ -176,9 +179,9 @@
                     <td class="cart__edit">
                       <a href="./product-details.html"><span class="icon_pencil"></span></a>
                     </td>
-                    <td class="cart__close" onclick="deleteItem()">
+                    <td class="cart__close" onclick="deleteItem(1)">
                       <span class="icon_close"></span>
-                    </td>
+                  </td>
                   </tr>
                   <tr>
                     <td class="cart__product__item">
