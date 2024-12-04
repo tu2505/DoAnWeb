@@ -47,7 +47,7 @@ function showSignInModal() {
     closeBtn.addEventListener('click', () => {
         modal.style.display = 'none';
         //Chuyển hướng người dùng
-        window.location.href = 'index.html';
+        window.location.href = 'signInIndex.html';
     });
 
     
@@ -73,7 +73,7 @@ function showSignUpModal() {
         modal.style.display = 'none';
 
         //Chuyển hướng người dùng
-        window.location.href = 'index.html';
+        window.location.href = 'signInIndex.html';
 
     });
 

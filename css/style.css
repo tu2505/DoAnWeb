@@ -2173,7 +2173,7 @@ ol {
 
 .shop__cart__table tbody tr .cart__product__item {
   overflow: hidden;
-  width: 600px;
+  width: 400px;
 }
 
 .shop__cart__table tbody tr .cart__product__item img {
@@ -2215,25 +2215,18 @@ ol {
   width: 200px;
 }
 
-.shop__cart__table tbody tr .cart__quantity {
+.shopcarttable tbody tr .cartquantity {
   width: 200px;
+  position: relative;
 }
 
-.shop__cart__table tbody tr .cart__quantity .pro-qty {
-  border: none;
-  padding: 0;
-  width: 110px;
-  border-radius: 0;
+.shopcarttable tbody tr .cartquantity label {
+  position: absolute;
+  left: 40px;
+  top: 60px;
 }
 
-.shop__cart__table tbody tr .cart__quantity .pro-qty input {
-  color: #444444;
-}
 
-.shop__cart__table tbody tr .cart__quantity .pro-qty .qtybtn {
-  font-size: 16px;
-  color: #444444;
-}
 
 .shop__cart__table tbody tr .cart__total {
   font-size: 16px;

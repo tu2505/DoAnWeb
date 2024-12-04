@@ -80,7 +80,14 @@
                 <div class="col-lg-3">
                     <div class="header__right">
                         <div class="header__right__auth">
-                            <a href="./dangnhap.html">Đăng nhập</a>
+                            <div class="dropdown">
+                                <span class="dropdown-userName">Xin chào Nguyễn Văn A</span>
+                                <div class="dropdown-content">
+                                    <a href="/views/SignIn/userInformation.html ">Thông tin cá nhân</a>
+                                    <a href="/views/SignIn/thongtindonhang.html">Thông tin đơn hàng</a>
+                                    <a href="#" id="logoutBtn" onclick="handleLogout()">Đăng xuất</a>
+                                </div>
+                            </div>
                         </div>
                         <ul class="header__right__widget">
                             <li><span class="icon_search search-switch"></span></li>
@@ -115,6 +122,12 @@
         </div>
     </div>
     <!-- Breadcrumb End -->
+
+    <div class="container">
+        <div class="d-flex justify-content-center align-items-center">
+            <h5 style="font-size: 50px; padding-left: 100px; font-weight: 500;">GIÀY JORDAN</h5>
+        </div>
+    </div>
 
     <!-- Shop Section Begin -->
     <section class="shop spad">
