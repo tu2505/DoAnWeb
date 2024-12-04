@@ -35,12 +35,7 @@
 }
 
 .table tbody tr td:nth-child(1) {
-    width: 70px; /* Cố định chiều rộng cho cột mô tả */
-    word-wrap: break-word; /* Chia dòng khi nội dung quá dài */
-}
-
-.table tbody tr td:nth-child(3) {
-    width: 350px; /* Cố định chiều rộng cho cột mô tả */
+    width: 150px; /* Cố định chiều rộng cho cột mô tả */
     word-wrap: break-word; /* Chia dòng khi nội dung quá dài */
 }
 
@@ -49,10 +44,7 @@
     word-wrap: break-word; /* Chia dòng khi nội dung quá dài */
 }
 
-.table tbody tr td:nth-child(6) {
-    width: 400px; /* Cố định chiều rộng cho cột mô tả */
-    word-wrap: break-word; /* Chia dòng khi nội dung quá dài */
-}
+
 
 .font-bold {
     font-weight: 600; /* Làm đậm chữ */
@@ -108,5 +100,13 @@
     border-radius: 5px;         /* Làm cho các góc tròn (tùy chọn) */
     font-weight: bold;    
 }
+
+.font_black{
+    color: #000;
+    }
+    
+    .font_black:focus{
+        color: #000;
+    }
 
 

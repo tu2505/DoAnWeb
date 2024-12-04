@@ -1648,6 +1648,12 @@ ol {
   color: #ffffff;
 }
 
+.pagination__option a.active {
+  background: #0d0d0d; /* Màu nền khi được chọn */
+  border-color: #0d0d0d; /* Màu viền */
+  color: #ffffff; /* Màu chữ */
+}
+
 /*---------------------
   Product Details
 -----------------------*/
