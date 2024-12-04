@@ -1,0 +1,69 @@
+.navMenu{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.navMenu-item{
+    padding: 10px 15px; /* Khoảng cách bên trong */
+    border-radius: 5px; /* Góc bo tròn */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng mượt */
+    cursor: pointer; /* Con trỏ tay khi hover */
+    text-decoration: none; /* Xóa gạch chân mặc định */
+    display: block; /* Để chiếm toàn bộ chiều rộng */
+    color: #000; /* Màu chữ */
+}
+
+.navMenu-item:hover {
+    background-color: white; /* Màu nền khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng khi hover */
+    color: black;
+    font-weight: 600; /* Màu chữ khi hover */
+}
+
+.custom-card {
+    border-radius: 5px;
+    padding: 15px;
+    height: 100%;
+  }
+
+.table thead tr th{
+    border: none;
+}
+
+.table tbody tr td{
+    vertical-align: middle;
+}
+
+.table tbody tr td:nth-child(1) {
+    width: 70px; /* Cố định chiều rộng cho cột mô tả */
+    word-wrap: break-word; /* Chia dòng khi nội dung quá dài */
+}
+
+.table tbody tr td:nth-child(3) {
+    width: 350px; /* Cố định chiều rộng cho cột mô tả */
+    word-wrap: break-word; /* Chia dòng khi nội dung quá dài */
+}
+
+.table tbody tr td:nth-child(3) {
+    width: 300px; /* Cố định chiều rộng cho cột mô tả */
+    word-wrap: break-word; /* Chia dòng khi nội dung quá dài */
+}
+
+.table tbody tr td:nth-child(6) {
+    width: 400px; /* Cố định chiều rộng cho cột mô tả */
+    word-wrap: break-word; /* Chia dòng khi nội dung quá dài */
+}
+
+.font-bold {
+    font-weight: 600; /* Làm đậm chữ */
+}
+
+.font-red{
+    color: red;
+    font-weight: 600;
+}
+
+.itemImage{
+    height: 80px;
+    width: 80px;
+}
