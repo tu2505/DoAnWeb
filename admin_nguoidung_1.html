@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/index.css" type="text/css">
-    <link rel="stylesheet" href="/css/admin.css" type="text/css">
+    <link rel="stylesheet" href="/css/admin_nguoidung.css" type="text/css">
     
 </head>
 
@@ -102,38 +102,105 @@
     
             <!-- Main Content -->
             <div class="col-10">
-                <h1 class="d-flex justify-content-center align-items-center mb-5 mt-3">Quản Lý Sản Phẩm</h1>
+                <h1 class="d-flex justify-content-center align-items-center mb-5 mt-3">Quản Lý Người Dùng</h1>
                 
+
+                <div class="row mb-3">
+                    <!-- Cột bên trái -->
+                    <div class="col-3 d-flex justify-content-start align-items-center">
+                        <div class="btn btn-success">
+                            Thêm
+                        </div>
+                    </div>
+                
+                    <!-- Cột bên phải -->
+                    <div class="col-9 d-flex justify-content-end">
+                        <div class="search">
+                            <input placeholder="Tìm kiếm ..."></input>
+                            <a href="/admin_sanpham_1.html" class="icon-link">
+                                <i class="icon_search"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
 
                 <!-- Table -->
             <table class="table table-hover">
                 <thead>
                     <tr>
                         <th>STT</th>
-                        <th>Hình Ảnh</th>
-                        <th>Sản Phẩm</th>
-                        <th>Giá</th>
-                        <th>Số Lượng</th>
-                        <th>Mô tả</th>
-                        <th>Thao Tác</th>
+                        <th>Tên</th>
+                        <th>Email</th>
+                        <th>Số điện thoại</th>
+                        <th>Địa chỉ</th>
+                        <th>Chức vụ</th>
+                        <th>Thao tác</th>
+                        <th>Khóa</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="row1">
                     <tr>
                         <td>1</td>
-                        <td><image src="/img/adidas/shop-1.jpg" class="itemImage mr-3"></image></td>
-                        <td class="font-bold">Nike Interact Run</td>
-                        <td class="font-red">100,000 VNĐ</td>
-                        <td>50</td>
-                        <td>Được trang bị đệm êm ái, phần đế ngoài bền bỉ,hiệu suất cao.
-                            Giày thể thao hiện đại với thiết kế năng động và phong cách.</td>
+                        <td class="font-bold">Nguyễn Văn C</td>
+                        <td>nguyenvanc@gmail.com</td>
+                        <td>0123485539</td>
+                        <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
+                        <td>Admin</td>
                         <td><button class="btn btn-primary">Sửa</button>
-                            <button class="btn btn-danger">Xóa</button>
+                            <button class="btn btn-danger" onclick="confirmDelete('row1')">Xóa</button>
                         </td>
+                        <td> <input type="checkbox" id="exampleCheck1" class="ml-3"></td>
                     </tr>
                     
                 </tbody>
+
+                <tbody id="row2">
+                    <tr>
+                        <td>2</td>
+                        <td class="font-bold">Nguyễn Văn B</td>
+                        <td>nguyenvana@gmail.com</td>
+                        <td>0123485999</td>
+                        <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
+                        <td>Nhân viên</td>
+                        <td><button class="btn btn-primary">Sửa</button>
+                            <button class="btn btn-danger" onclick="confirmDelete('row2')">Xóa</button>
+                            
+                        </td>
+                        <td> <input type="checkbox" id="exampleCheck1" class="ml-3"></td>
+                    </tr>
+                    
+                </tbody>
+
+                <tbody id="row3">
+                    <tr>
+                        <td>3</td>
+                        <td class="font-bold">Nguyễn Văn A</td>
+                        <td>nguyenvana@gmail.com</td>
+                        <td>0123485999</td>
+                        <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
+                        <td>Người dùng</td>
+                        <td><button class="btn btn-primary">Sửa</button>
+                            <button class="btn btn-danger" onclick="confirmDelete('row3')">Xóa</button>
+                        </td>
+                        <td> <input type="checkbox" id="exampleCheck1" class="ml-3"></td>
+                    </tr>
+                    
+                </tbody>
+
+
+                
+
             </table>
+
+            <div class="col-lg-12 text-center" style="margin-top: 30px;">
+                <div class="pagination__option">
+                    <a href="/admin_sanpham_1.html" class="active">1</a>
+                    <a href="/admin_sanpham_2.html">2</a>
+                    <a href="/admin_sanpham_2.html"><i class="fa fa-angle-right"></i></a>
+                </div>
 
             </div>
         </div>
@@ -164,6 +231,8 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+
 </body>
 
 </html>

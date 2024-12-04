@@ -43,3 +43,35 @@ function deleteItem(itemId) {
     console.log("Deletion canceled by the user.");
   }
 }
+
+function confirmDelete(id) {
+  const result = confirm("Bạn có chắc muốn xóa không?");
+  if (result) {
+      alert("Đã xóa thành công!");
+      document.getElementById(id).style.display = "none";
+  } else {
+      alert("Hủy bỏ xóa.");
+  }
+}
+
+function confirmUpdate() {
+  const result = confirm("Bạn có muốn cập nhật?");
+  if (result) {
+      alert("Cập nhật thành công!");
+      window.location.href='/admin_nguoidung_1.html';
+  } else {
+      alert("Hủy bỏ cập nhật.");
+  }
+}
+
+function confirmAdd() {
+  const result = confirm("Bạn có muốn thêm người dùng này?");
+  if (result) {
+      alert("Thêm thành công!");
+      window.location.href='/admin_nguoidung_1.html';
+  } else {
+      alert("Hủy bỏ thành công.");
+  }
+}
+
+

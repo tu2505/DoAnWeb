@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ashion Template">
+    <meta name="keywords" content="Ashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ashion with Fashion</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="/css/admin.css" type="text/css">
+    
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+        <ul class="offcanvas__widget">
+            <li><span class="icon_search search-switch"></span></li>
+            <li><a href="#"><span class="icon_heart_alt"></span>
+                <div class="tip">2</div>
+            </a></li>
+            <li><a href="#"><span class="icon_bag_alt"></span>
+                <div class="tip">2</div>
+            </a></li>
+        </ul>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+            <a href="#">Đăng nhập</a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="header__right">
+                        <div class="header__right__auth">
+                            
+                            <div class="dropdown">
+                                
+                                <span class="dropdown-userName">Xin chào Admin</span>
+                                <div class="dropdown-content">
+                                    <a href="#" id="logoutBtn">Đăng xuất</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+
+    <div class="container-fluid vh-100">
+        <div class="row h-100">
+            <!-- Aside -->
+            <aside class="col-2 p-3" style="background-color: #f8f9fa;">
+                <div class="navMenu">
+                    <h5 class="navMenu-item">Quản lý sản phẩm</h5>
+                    <h5 class="navMenu-item">Quản lý đơn hàng</h5>
+                </div>
+            </aside>
+    
+            <!-- Main Content -->
+            <div class="col-10">
+                <h1 class="d-flex justify-content-center align-items-center mb-5 mt-3">Quản Lý Sản Phẩm</h1>
+                
+
+                <div class="row mb-3">
+                    <!-- Cột bên trái -->
+                    <div class="col-3 d-flex justify-content-start align-items-center">
+                        <div class="btn btn-success">
+                            Thêm
+                        </div>
+                    </div>
+                
+                    <!-- Cột bên phải -->
+                    <div class="col-9 d-flex justify-content-end">
+                        <div class="search">
+                            <input placeholder="Tìm kiếm ..."></input>
+                            <a href="/admin_sanpham_1.html" class="icon-link">
+                                <i class="icon_search"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Table -->
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Hình Ảnh</th>
+                        <th>Sản Phẩm</th>
+                        <th>Giá</th>
+                        <th>Số Lượng</th>
+                        <th>Mô tả</th>
+                        <th>Thao Tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><image src="/img/adidas/shop-1.jpg" class="itemImage mr-3"></image></td>
+                        <td class="font-bold">Nike Interact Run</td>
+                        <td class="font-red">100,000 VNĐ</td>
+                        <td>50</td>
+                        <td>Được trang bị đệm êm ái, phần đế ngoài bền bỉ,hiệu suất cao.
+                            Giày thể thao hiện đại với thiết kế năng động và phong cách.</td>
+                        <td><button class="btn btn-primary">Sửa</button>
+                            <button class="btn btn-danger">Xóa</button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><image src="/img/adidas/shop-1.jpg" class="itemImage mr-3"></image></td>
+                        <td class="font-bold">Nike Interact Run</td>
+                        <td class="font-red">100,000 VNĐ</td>
+                        <td>50</td>
+                        <td>Được trang bị đệm êm ái, phần đế ngoài bền bỉ,hiệu suất cao.
+                            Giày thể thao hiện đại với thiết kế năng động và phong cách.</td>
+                        <td><button class="btn btn-primary">Sửa</button>
+                            <button class="btn btn-danger">Xóa</button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><image src="/img/adidas/shop-1.jpg" class="itemImage mr-3"></image></td>
+                        <td class="font-bold">Nike Interact Run</td>
+                        <td class="font-red">100,000 VNĐ</td>
+                        <td>50</td>
+                        <td>Được trang bị đệm êm ái, phần đế ngoài bền bỉ,hiệu suất cao.
+                            Giày thể thao hiện đại với thiết kế năng động và phong cách.</td>
+                        <td><button class="btn btn-primary">Sửa</button>
+                            <button class="btn btn-danger">Xóa</button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+
+            </table>
+
+            <div class="col-lg-12 text-center" style="margin-top: 30px;">
+                <div class="pagination__option">
+                    <a href="/admin_sanpham_1.html"><i class="fa fa-angle-left"></i></a>
+                    <a href="/admin_sanpham_1.html">1</a>
+                    <a href="/admin_sanpham_2.html" class="active">2</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Js Plugins -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
