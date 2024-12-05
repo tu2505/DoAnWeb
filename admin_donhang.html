@@ -92,12 +92,20 @@
 
 
     <div class="container-fluid vh-100">
-        <div class="row h-100">
+        <div class="row h-80">
             <!-- Aside -->
             <aside class="col-2 p-3" style="background-color: #f8f9fa;">
                 <div class="navMenu">
-                    <h5 class="navMenu-item">Quản lý sản phẩm</h5>
-                    <h5 class="navMenu-item">Quản lý đơn hàng</h5>
+                    <div class="navMenu">
+                        <h5><a href="/admin_sanpham_1.html" class="navMenu-item">Quản lý sản phẩm</a></h5>
+                        <h5><a href="/admin_donhang.html" class="navMenu-item" style="background-color: rgb(218, 218, 218); /* Màu nền khi hover */
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                            color: black;
+                            font-weight: 600;">Quản lý đơn hàng</a></h5>
+                        <h5><a href="/admin_nguoidung_1.html" class="navMenu-item">Quản lý người dùng</a></h5>
+                        <h5><a href="/admin_thongkesanpham.html" class="navMenu-item">Thống kê sản phẩm</a></h5>
+                        <h5><a href="/admin_thongkenguoidung.html" class="navMenu-item">Thống kê khách hàng</a></h5>
+                    </div>
                 </div>
             </aside>
     
@@ -114,7 +122,7 @@
                             <input type="date">
                         </div>
 
-                        <div class="col-3 d-flex justify-content-start align-items-center">
+                        <div class="col d-flex justify-content-start align-items-center">
                             <div class="font-bold">Trạng thái:</div>
                             <select id="loai" name="loai" style="padding: 5px; font-size: 16px;" class="ml-2">
                                 <option value="loai2">Chưa xử lý</option>
@@ -134,7 +142,7 @@
                             </select>
                         </div>
 
-                        <div class="col-3 d-flex justify-content-start align-items-center">
+                        <div class="col d-flex justify-content-start align-items-center">
                             <div class="font-bold mr-2">Địa chỉ:</div>
                             <input style="max-width: 180px;" type="text" class="form-control form-control-custom font_black" id="nameInput" aria-describedby="nameInputHelp" placeholder="Điền vào địa chỉ">
                         </div>

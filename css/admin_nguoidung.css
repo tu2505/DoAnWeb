@@ -4,7 +4,7 @@
 }
 
 .navMenu-item{
-    padding: 10px 15px; /* Khoảng cách bên trong */
+    padding: 20px; /* Khoảng cách bên trong */
     border-radius: 5px; /* Góc bo tròn */
     transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng mượt */
     cursor: pointer; /* Con trỏ tay khi hover */
