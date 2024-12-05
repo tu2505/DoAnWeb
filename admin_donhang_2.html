@@ -24,7 +24,8 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/index.css" type="text/css">
-    <link rel="stylesheet" href="/css/admin_nguoidung.css" type="text/css">
+    <link rel="stylesheet" href="/css/admin_donhang.css" type="text/css">
+    
     
 </head>
 
@@ -102,93 +103,124 @@
     
             <!-- Main Content -->
             <div class="col-10">
-                <h1 class="d-flex justify-content-center align-items-center mb-5 mt-3">Quản Lý Người Dùng</h1>
+                <h1 class="d-flex justify-content-center align-items-center mb-5 mt-3">Quản Lý Đơn Hàng</h1>
                 
 
-                <div class="row mb-3">
-                    <!-- Cột bên trái -->
-                    <div class="col-3 d-flex justify-content-start align-items-center">
-                        <div class="btn btn-success">
-                            Thêm
+                    <div class="row mb-3" style="padding: 12px;">
+                        <div class="col d-flex justify-content-start align-items-center">
+                            <div class="font-bold">Từ:</div>
+                            <input type="date" class="ml-2">
+                            <div class="font-bold ml-2 mr-2">đến</div>
+                            <input type="date">
                         </div>
-                    </div>
-                
-                    <!-- Cột bên phải -->
-                    <div class="col-9 d-flex justify-content-end">
-                        <div class="search">
-                            <input placeholder="Tìm kiếm ..."></input>
-                            <a href="/admin_sanpham_1.html" class="icon-link">
-                                <i class="icon_search"></i>
-                            </a>
+
+                        <div class="col-3 d-flex justify-content-start align-items-center">
+                            <div class="font-bold">Trạng thái:</div>
+                            <select id="loai" name="loai" style="padding: 5px; font-size: 16px;" class="ml-2">
+                                <option value="loai2">Chưa xử lý</option>
+                                <option value="loai3">Đã xác nhận</option>
+                                <option value="loai4">Đã giao thành công</option>
+                                <option value="loai4">Đã hủy</option>
+                            </select>
                         </div>
+
+                        <div class="col d-flex justify-content-start align-items-center">
+                            <div class="font-bold">Quận:</div>
+                            <select id="loai" name="loai" style="padding: 5px; font-size: 16px;" class="ml-2">
+                                <option value="loai2">Quận 1</option>
+                                <option value="loai3">Quận 2</option>
+                                <option value="loai4">Quận 3</option>
+                                <option value="loai4">Quận 4</option>
+                            </select>
+                        </div>
+
+                        <div class="col-3 d-flex justify-content-start align-items-center">
+                            <div class="font-bold mr-2">Địa chỉ:</div>
+                            <input style="max-width: 180px;" type="text" class="form-control form-control-custom font_black" id="nameInput" aria-describedby="nameInputHelp" placeholder="Điền vào địa chỉ">
+                        </div>
+
+                        <div class="col d-flex justify-content-end align-items-center">
+                            <a href="/admin_donhang.html" class="btn btn-success" style="text-decoration: none;">
+                                Lọc
+                              </a>
+                              
+                        </div>
+                    
+                        
                     </div>
-                </div>
                 
                 
 
 
                 <!-- Table -->
-            <table class="table table-hover">
+            <table class="table table-hover mt-3">
                 <thead>
                     <tr>
-                        <th>STT</th>
-                        <th>Tên</th>
-                        <th>Email</th>
-                        <th>Số điện thoại</th>
+                        <th>Mã đơn hàng</th>
+                        <th>Tên khách hàng</th>
                         <th>Địa chỉ</th>
-                        <th>Chức vụ</th>
+                        <th>Ngày mua</th>
+                        <th>Tổng tiền</th>
+                        <th>Trạng thái</th>
                         <th>Thao tác</th>
-                        <th>Khóa</th>
                     </tr>
                 </thead>
                 <tbody id="row1">
                     <tr>
-                        <td>1</td>
-                        <td class="font-bold">Nguyễn Văn C</td>
-                        <td>nguyenvanc@gmail.com</td>
-                        <td>0123485539</td>
-                        <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
-                        <td>Admin</td>
-                        <td><button class="btn btn-primary">Sửa</button>
-                            <button class="btn btn-danger" onclick="confirmDelete('row1')">Xóa</button>
-                        </td>
-                        <td> <input type="checkbox" id="exampleCheck1" class="ml-3"></td>
-                    </tr>
-                    
-                </tbody>
-
-                <tbody id="row2">
-                    <tr>
-                        <td>2</td>
-                        <td class="font-bold">Nguyễn Văn B</td>
-                        <td>nguyenvana@gmail.com</td>
-                        <td>0123485999</td>
-                        <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
-                        <td>Nhân viên</td>
-                        <td><button class="btn btn-primary">Sửa</button>
-                            <button class="btn btn-danger" onclick="confirmDelete('row2')">Xóa</button>
-                            
-                        </td>
-                        <td> <input type="checkbox" id="exampleCheck1" class="ml-3"></td>
-                    </tr>
-                    
-                </tbody>
-
-                <tbody id="row3">
-                    <tr>
-                        <td>3</td>
+                        <td class="font-bold">Ashion005</td>
                         <td class="font-bold">Nguyễn Văn A</td>
-                        <td>nguyenvana@gmail.com</td>
-                        <td>0123485999</td>
                         <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
-                        <td>Người dùng</td>
-                        <td><button class="btn btn-primary">Sửa</button>
-                            <button class="btn btn-danger" onclick="confirmDelete('row3')">Xóa</button>
+                        <td>27/3/2024</td>
+                        <td class="font-red">14.456.000 VNĐ</td>
+                        <td><div style="color: #28a745;font-weight: 600;">Đã giao thành công</div></td>
+                        <td>
+                            <a href="admin_chitietdonhang.html" class="btn btn-primary">Xem chi tiết</a>
+                          </td>                            
                         </td>
-                        <td> <input type="checkbox" id="exampleCheck1" class="ml-3"></td>
                     </tr>
+
+                    <tr>
+                        <td class="font-bold">Ashion006</td>
+                        <td class="font-bold">Nguyễn Văn A</td>
+                        <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
+                        <td>27/3/2024</td>
+                        <td class="font-red">14.456.000 VNĐ</td>
+                        <td><div style="color: #1700e8;font-weight: 600;">Đã xác nhận</div></td>
+                        <td>
+                            <a href="admin_chitietdonhang.html" class="btn btn-primary">Xem chi tiết</a>
+                          </td>                            
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-bold">Ashion007</td>
+                        <td class="font-bold">Nguyễn Văn A</td>
+                        <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
+                        <td>27/3/2024</td>
+                        <td class="font-red">14.456.000 VNĐ</td>
+                        <td><div style="color: #d200e9;font-weight: 600;">Chưa xử lý</div></td>
+                        <td>
+                            <a href="admin_chitietdonhang.html" class="btn btn-primary">Xem chi tiết</a>
+                          </td>                            
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-bold">Ashion008</td>
+                        <td class="font-bold">Nguyễn Văn A</td>
+                        <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
+                        <td>27/3/2024</td>
+                        <td class="font-red">14.456.000 VNĐ</td>
+                        <td><div style="color: #ed8f84;font-weight: 600;">Đã hủy</div></td>
+                        <td>
+                            <a href="admin_chitietdonhang.html" class="btn btn-primary">Xem chi tiết</a>
+                          </td>                            
+                        </td>
+                    </tr>   
                     
                 </tbody>
+
+                
 
 
                 
@@ -197,9 +229,9 @@
 
             <div class="col-lg-12 text-center" style="margin-top: 30px;">
                 <div class="pagination__option">
-                    <a href="/admin_nguoidung_1.html" class="active">1</a>
-                    <a href="/admin_nguoidung_2.html">2</a>
-                    <a href="/admin_nguoidung_2.html"><i class="fa fa-angle-right"></i></a>
+                    <a href="/admin_donhang.html"><i class="fa fa-angle-left"></i></a>
+                    <a href="/admin_donhang.html" >1</a>
+                    <a href="/admin_donhang_2.html"class="active">2</a>
                 </div>
 
             </div>

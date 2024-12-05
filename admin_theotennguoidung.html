@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/index.css" type="text/css">
-    <link rel="stylesheet" href="/css/admin_thongkesanpham.css" type="text/css">
+    <link rel="stylesheet" href="/css/admin_thongkenguoidung.css" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_upward" />
     
     
@@ -105,7 +105,7 @@
             <!-- Main Content -->
             <div class="col-10">
                 
-                <h1 class="d-flex justify-content-center align-items-center mb-5 mt-3">Thống Kê Sản Phẩm</h1>
+                <h1 class="d-flex justify-content-center align-items-center mb-5 mt-3">Thống Kê Khách hàng</h1>
                 
 
                 <div class="row mb-3" style="padding: 12px;">
@@ -117,13 +117,13 @@
                     </div>
 
                     <div class="col d-flex justify-content-start align-items-center">
-                        <div class="font-bold">Tên sản phẩm:</div>
-                        <input style="max-width: 250px;" type="text" class="form-control form-control-custom font_black ml-2" id="nameInput" aria-describedby="nameInputHelp" placeholder="Nhập tên sản phẩm...">
+                        <div class="font-bold">Tên khách hàng:</div>
+                        <input style="max-width: 250px;" type="text" class="form-control form-control-custom font_black ml-2" id="nameInput" aria-describedby="nameInputHelp" placeholder="Nhập tên khách hàng..." value="Nguyễn Văn A">
                         
                     </div>
 
                     <div class="col d-flex justify-content-end align-items-center">
-                        <a href="/admin_theotensanpham.html" class="btn btn-success" style="text-decoration: none;">
+                        <a href="/admin_thongkenguoidung.html" class="btn btn-success" style="text-decoration: none;">
                             Thống kê
                           </a>
                           
@@ -135,9 +135,11 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Ảnh</th>
-                            <th>Tên</th>
-                            <th style="display: flex; align-items: center;">Số lượng bán ra
+                            <th>STT</th>
+                            <th>Tên khách hàng</th>
+                            <th>Địa chỉ
+                            </th>
+                            <th style="display: flex; align-items: center;">Số lượng đơn hàng đặt 
                                 <span id="sortQuantityAsc" class="btn-link btn-sm material-symbols-outlined ml-2" style="padding: 0px; font-size: 20px;">
                                 arrow_upward
                                 </span>
@@ -145,59 +147,22 @@
                                     arrow_upward
                                 </span>
                             </th>
-                            <th>Tổng tiền
-                                <span id="sortRevenueAsc" class="btn-link btn-sm material-symbols-outlined ml-2" style="padding: 0px; font-size: 20px;">
-                                    arrow_upward
-                                    </span>
-                                    <span id="sortRevenueDesc" class="btn-link btn-sm material-symbols-outlined ml-2" style="padding: 0px; font-size: 20px; transform: rotate(180deg);">
-                                        arrow_upward
-                                    </span>
-
-                            </th>
                             <th>Chi tiết</th>
                             
                         </tr>
                     </thead>
                     <tbody id="productTable">
                         <tr>
-                            <td><image src="/img/adidas/shop-1.jpg" class="itemImage mr-3"></image></td>
-                            <td class="font-bold">Nike Interact Run</td>
-                            <td class="itemQuantity"><div style="margin-left: 40px;">25</div></td>
-                            <td class="font-red revenue">50.000.000 VNĐ</td>
+                            <td>1</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
+                            <td class="itemQuantity"><div style="margin-left: 120px;">5</div></td>
                             <td><a href="/admin_donhang.html" class="btn btn-primary">Xem</a>
                             </td>
                             
                         </tr>
 
-                        <tr>
-                            <td><image src="/img/nike/shop-10.jpg" class="itemImage mr-3"></image></td>
-                            <td class="font-bold">Nike Interact Run</td>
-                            <td class="itemQuantity"><div style="margin-left: 40px;">19</div></td>
-                            <td class="font-red revenue">25.200.000 VNĐ</td>
-                            <td><a href="/admin_donhang.html" class="btn btn-primary">Xem</a>
-                            </td>
-                            
-                        </tr>
-
-                        <tr>
-                            <td><image src="/img/nike/shop-11.jpg" class="itemImage mr-3"></image></td>
-                            <td class="font-bold">Nike Airman Dn</td>
-                            <td class="itemQuantity"><div style="margin-left: 40px;">28</div></td>
-                            <td class="font-red revenue">24.000.000 VNĐ</td>
-                            <td><a href="/admin_donhang.html" class="btn btn-primary">Xem</a>
-                            </td>
-                            
-                        </tr>
-
-                        <tr>
-                            <td><image src="/img/nike/shop-12.jpg" class="itemImage mr-3"></image></td>
-                            <td class="font-bold">Nike Impact</td>
-                            <td class="itemQuantity"><div style="margin-left: 40px;">27</div></td>
-                            <td class="font-red revenue">25.000.000 VNĐ</td>
-                            <td><a href="/admin_donhang.html" class="btn btn-primary">Xem</a>
-                            </td>
-                            
-                        </tr>
+                       
                         
                     </tbody>
 
@@ -243,8 +208,28 @@
         document.getElementById('sortQuantityDesc').addEventListener('click', () => sortTable('itemQuantity', false));
 
         // // Xử lý sự kiện cho nút sắp xếp tổng tiền bán
-        document.getElementById('sortRevenueAsc').addEventListener('click', () => sortTable('revenue', true));
-        document.getElementById('sortRevenueDesc').addEventListener('click', () => sortTable('revenue', false));
+            document.getElementById('sortRevenueAsc').addEventListener('click', () => sortTable('revenue', true));
+            document.getElementById('sortRevenueDesc').addEventListener('click', () => sortTable('revenue', false));
+
+
+        // Hàm sắp xếp bảng theo số lượng bán
+        function sortTable(columnClass, asc) {
+            const rows = Array.from(document.querySelectorAll("#productTable tr"));
+            rows.sort((rowA, rowB) => {
+            const valueA = parseInt(rowA.querySelector(`.${columnClass}`).textContent);
+            const valueB = parseInt(rowB.querySelector(`.${columnClass}`).textContent);
+            return asc ? valueA - valueB : valueB - valueA;});
+            rows.forEach(row => document.querySelector("#productTable").appendChild(row));
+        }
+
+
+// Xử lý sự kiện cho nút sắp xếp số lượng bán
+document.getElementById('sortQuantityAsc').addEventListener('click', () => sortTable('itemQuantity', true));
+document.getElementById('sortQuantityDesc').addEventListener('click', () => sortTable('itemQuantity', false));
+
+// // Xử lý sự kiện cho nút sắp xếp tổng tiền bán
+// document.getElementById('sortRevenueAsc').addEventListener('click', () => sortTable('revenue', true));
+// document.getElementById('sortRevenueDesc').addEventListener('click', () => sortTable('revenue', false));
     </script>
 
 
