@@ -34,36 +34,10 @@
     vertical-align: middle;
 }
 
-.table tbody tr td:nth-child(1) {
-    width: 50px; /* Cố định chiều rộng cho cột mô tả */
-    word-wrap: break-word; /* Chia dòng khi nội dung quá dài */
-}
-
 .table tbody tr td:nth-child(2) {
-    width: 200px; /* Cố định chiều rộng cho cột mô tả */
+    width: 300px; /* Cố định chiều rộng cho cột mô tả */
     word-wrap: break-word; /* Chia dòng khi nội dung quá dài */
 }
-
-.table tbody tr td:nth-child(3) {
-    width: 250px; /* Cố định chiều rộng cho cột mô tả */
-    word-wrap: break-word; /* Chia dòng khi nội dung quá dài */
-}
-
-.table tbody tr td:nth-child(4) {
-    width: 150px; /* Cố định chiều rộng cho cột mô tả */
-    word-wrap: break-word; /* Chia dòng khi nội dung quá dài */
-}
-
-.table tbody tr td:nth-child(5) {
-    width: 250px; /* Cố định chiều rộng cho cột mô tả */
-    word-wrap: break-word; /* Chia dòng khi nội dung quá dài */
-}
-
-.table tbody tr td:nth-child(6) {
-    width: 150px; /* Cố định chiều rộng cho cột mô tả */
-    word-wrap: break-word; /* Chia dòng khi nội dung quá dài */
-}
-
 
 
 
@@ -81,6 +55,12 @@
 .itemImage{
     height: 80px;
     width: 80px;
+}
+
+.search{
+    background-color: rgb(218, 218, 218);
+    border-radius: 20px;
+    padding: 10px;
 }
 
 .search{
@@ -110,26 +90,20 @@
     transform: scale(1.2);     /* Phóng to biểu tượng */
 }
 
+.mark-success{
+    padding: 5px 10px;          /* Khoảng cách giữa chữ và viền */
+    background-color: green;    /* Màu nền xanh lá */
+    color: white;               /* Màu chữ trắng */
+    border-radius: 5px;         /* Làm cho các góc tròn (tùy chọn) */
+    font-weight: bold;    
+}
+
 .font_black{
-color: #000;
-}
-
-.font_black:focus{
     color: #000;
-}
-
-.form-border{
-    border: 1px solid #BBBCB6
-}
-
-#valueInput::-webkit-outer-spin-button,
-#valueInput::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-#valueInput {
-    -moz-appearance: textfield; /* Firefox */
-}
+    }
+    
+    .font_black:focus{
+        color: #000;
+    }
 
 
