@@ -54,24 +54,22 @@ function confirmDelete(id) {
   }
 }
 
-function confirmUpdate() {
-  const result = confirm("Bạn có muốn cập nhật?");
+function confirmUpdate(confirmMessage,link) {
+  const result = confirm(confirmMessage);
   if (result) {
       alert("Cập nhật thành công!");
-      window.location.href='/admin_nguoidung_1.html';
+      window.location.href=link;
   } else {
       alert("Hủy bỏ cập nhật.");
   }
 }
 
-function confirmAdd() {
-  const result = confirm("Bạn có muốn thêm người dùng này?");
+function confirmAdd(confirmMessage,link) {
+  const result = confirm(confirmMessage);
   if (result) {
       alert("Thêm thành công!");
-      window.location.href='/admin_nguoidung_1.html';
+      window.location.href=link;
   } else {
       alert("Hủy bỏ thành công.");
   }
 }
-
-

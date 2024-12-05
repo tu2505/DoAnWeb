@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ashion Template">
+    <meta name="keywords" content="Ashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ashion with Fashion</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="/css/admin_nguoidung.css" type="text/css">
+    
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+        <ul class="offcanvas__widget">
+            <li><span class="icon_search search-switch"></span></li>
+            <li><a href="#"><span class="icon_heart_alt"></span>
+                <div class="tip">2</div>
+            </a></li>
+            <li><a href="#"><span class="icon_bag_alt"></span>
+                <div class="tip">2</div>
+            </a></li>
+        </ul>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+            <a href="#">Đăng nhập</a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="header__right">
+                        <div class="header__right__auth">
+                            
+                            <div class="dropdown">
+                                
+                                <span class="dropdown-userName">Xin chào Admin</span>
+                                <div class="dropdown-content">
+                                    <a href="#" id="logoutBtn">Đăng xuất</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+
+    <div class="container-fluid vh-100">
+        <div class="row h-100">
+            <!-- Aside -->
+            <aside class="col-2 p-3" style="background-color: #f8f9fa;">
+                <div class="navMenu">
+                    <h5 class="navMenu-item">Quản lý sản phẩm</h5>
+                    <h5 class="navMenu-item">Quản lý đơn hàng</h5>
+                </div>
+            </aside>
+    
+            <!-- Main Content -->
+            <div class="col-10">
+                <h1 class="d-flex justify-content-center align-items-center mt-3">Sửa Sản Phẩm</h1>
+
+                <div style="padding-left: 50px; padding-right: 50px; margin-bottom: 100px;">
+                    <div class="custom-card">
+                        <div class="card form-border rounded-5 p-3" style="border-radius: 5px;">
+    
+                            <form>
+                                <div class="mb-3">
+                                    <button type="button" class="btn btn-secondary" onclick="document.getElementById('imageUpload').click()">
+                                        Chọn ảnh
+                                    </button>
+                                    <input type="file" id="imageUpload" accept="image/*" onchange="previewImage(event)" style="display: none;">
+                                </div>
+    
+                                <!-- Khu vực hiển thị ảnh -->
+                                <div id="imagePreviewContainer" class="mt-4 mb-4 d-flex flex-column align-items-center text-center">
+                                    <p>Ảnh bạn đã chọn:</p>
+                                    <img id="imagePreview" class="img-thumbnail" style="max-width: 300px;" src="/img/adidas/shop-1.jpg">
+                                </div>
+    
+                                <div class="form-group mb-4">
+                                    <label for="nameInput">Tên sản phẩm</label>
+                                    <input type="text" class="form-control form-control-custom form-border font_black" id="nameInput" placeholder="Điền vào tên sản phẩm" 
+                                    value="Nike Interact Run">
+                                  </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group mb-4">
+                                            <label for="valueInput">Đơn giá</label>
+                                            <input class="form-control form-control-custom form-border font_black" type="text" maxlength="12" placeholder="Nhập giá (VNĐ)" id="valueInput" value="1000000">
+
+                                        </div>
+                                    </div>
+                                    
+
+                                    <div class="col-6">
+                                        <div class="form-group mb-4">
+                                            <label for="numberInput">Số lượng</label>
+                                            <input class="form-control form-control-custom form-border font_black" type="number" id="numberInput" placeholder="Nhập số lượng" value="4">
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="mb-3">
+                                    <label for="multiLineText" class="form-label">Mô tả</label>
+                                    <textarea id="multiLineText" class="form-control form-borde font_black" rows="4" placeholder="Nhập văn bản tại đây...">Được trang bị đệm êm ái, phần đế ngoài bền bỉ,hiệu suất cao. Giày thể thao hiện đại với thiết kế năng động và phong cách.</textarea>
+                                </div>
+        
+                                  <div class="form-group mb-4">
+                                    <label for="passInput">Hãng:</label>
+                                    <select id="loai" name="loai" style="padding: 5px; font-size: 16px;" class="ml-2 form-border">
+                                        <option value="loai2">Nike</option>
+                                        <option value="loai3">Adidas</option>
+                                        <option value="loai4">Jordan</option>
+                                    </select>
+                                  </div>
+                                  
+                                  <div class="d-flex justify-content-center align-items-center">
+                                    <a href="/admin_sanpham_1.html" class="btn text-white bg-danger" role="button">
+                                        Đóng
+                                    </a>
+
+                                    <button type="button" class="btn text-white bg-primary ml-5" data-toggle="modal" data-target="#exampleModalCenter" onclick="confirmUpdate('Bạn có muốn cập nhật sản phẩm này không?','/admin_sanpham_1.html')">
+                                        Cập nhật
+                                    </button>
+                                </div>
+    
+                            </form>
+    
+                        </div>
+                    
+    
+                    </div>
+                </div>
+                
+                
+                
+
+
+            
+
+            
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+<script>
+    function previewImage(event) {
+        const file = event.target.files[0]; // Lấy file người dùng chọn
+        if (file) {
+            const preview = document.getElementById('imagePreview');
+            const previewContainer = document.getElementById('imagePreviewContainer');
+            
+            preview.src = URL.createObjectURL(file); // Tạo URL tạm cho ảnh
+        }
+    }
+
+    
+    
+</script>
+
+
+
+
+
+<!-- Js Plugins -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

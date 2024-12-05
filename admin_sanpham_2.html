@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/index.css" type="text/css">
-    <link rel="stylesheet" href="/css/admin.css" type="text/css">
+    <link rel="stylesheet" href="/css/admin_sanpham.css" type="text/css">
     
 </head>
 
@@ -108,9 +108,10 @@
                 <div class="row mb-3">
                     <!-- Cột bên trái -->
                     <div class="col-3 d-flex justify-content-start align-items-center">
-                        <div class="btn btn-success">
+                        <a href="/admin_them_sanpham.html" class="btn btn-success">
                             Thêm
-                        </div>
+                        </a>
+                        
                     </div>
                 
                     <!-- Cột bên phải -->
@@ -123,6 +124,8 @@
                         </div>
                     </div>
                 </div>
+                
+                
 
 
                 <!-- Table -->
@@ -132,56 +135,61 @@
                         <th>STT</th>
                         <th>Hình Ảnh</th>
                         <th>Sản Phẩm</th>
+                        <th>Hãng</th>
                         <th>Giá</th>
                         <th>Số Lượng</th>
                         <th>Mô tả</th>
                         <th>Thao Tác</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="row1">
                     <tr>
                         <td>1</td>
                         <td><image src="/img/adidas/shop-1.jpg" class="itemImage mr-3"></image></td>
                         <td class="font-bold">Nike Interact Run</td>
+                        <td>Nike</td>
                         <td class="font-red">100,000 VNĐ</td>
-                        <td>50</td>
+                        <td><div style="margin-left: 25px;">50</div></td>
                         <td>Được trang bị đệm êm ái, phần đế ngoài bền bỉ,hiệu suất cao.
                             Giày thể thao hiện đại với thiết kế năng động và phong cách.</td>
-                        <td><button class="btn btn-primary">Sửa</button>
-                            <button class="btn btn-danger">Xóa</button>
+                        <td><a href="/admin_sua_sanpham.html" class="btn btn-primary">Sửa</a>
+                            <button class="btn btn-danger" onclick="confirmDelete('row1')">Xóa</button>
                         </td>
                     </tr>
                     
                 </tbody>
 
 
-                <tbody>
+                <tbody id="row2">
                     <tr>
-                        <td>1</td>
+                        <td>2</td>
                         <td><image src="/img/adidas/shop-1.jpg" class="itemImage mr-3"></image></td>
                         <td class="font-bold">Nike Interact Run</td>
+                        <td>Nike</td>
                         <td class="font-red">100,000 VNĐ</td>
-                        <td>50</td>
+                        <td><div style="margin-left: 25px;">50</div></td>
+                        
                         <td>Được trang bị đệm êm ái, phần đế ngoài bền bỉ,hiệu suất cao.
                             Giày thể thao hiện đại với thiết kế năng động và phong cách.</td>
-                        <td><button class="btn btn-primary">Sửa</button>
-                            <button class="btn btn-danger">Xóa</button>
+                        <td><a href="/admin_sua_sanpham.html" class="btn btn-primary">Sửa</a>
+                            <button class="btn btn-danger" onclick="confirmDelete('row2')">Xóa</button>
                         </td>
                     </tr>
                     
                 </tbody>
 
-                <tbody>
+                <tbody id="row3">
                     <tr>
-                        <td>1</td>
+                        <td>3</td>
                         <td><image src="/img/adidas/shop-1.jpg" class="itemImage mr-3"></image></td>
                         <td class="font-bold">Nike Interact Run</td>
+                        <td>Nike</td>
                         <td class="font-red">100,000 VNĐ</td>
-                        <td>50</td>
+                        <td><div style="margin-left: 25px;">50</div></td>
                         <td>Được trang bị đệm êm ái, phần đế ngoài bền bỉ,hiệu suất cao.
                             Giày thể thao hiện đại với thiết kế năng động và phong cách.</td>
-                        <td><button class="btn btn-primary">Sửa</button>
-                            <button class="btn btn-danger">Xóa</button>
+                        <td><a href="/admin_sua_sanpham.html" class="btn btn-primary">Sửa</a>
+                            <button class="btn btn-danger" onclick="confirmDelete('row3')">Xóa</button>
                         </td>
                     </tr>
                     
@@ -225,6 +233,8 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/main.js"></script>
+<script src="/js/admin.js"></script>
+
 </body>
 
 </html>
