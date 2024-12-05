@@ -111,14 +111,14 @@
                 <div class="row mb-3" style="padding: 12px;">
                     <div class="col d-flex justify-content-start align-items-center">
                         <div class="font-bold">Từ:</div>
-                        <input type="date" class="ml-2">
+                        <input type="date" class="ml-2" value="2024-01-12">
                         <div class="font-bold ml-2 mr-2">đến</div>
-                        <input type="date">
+                        <input type="date" value="2024-05-12">
                     </div>
 
                     <div class="col d-flex justify-content-start align-items-center">
                         <div class="font-bold">Tên sản phẩm:</div>
-                        <input style="max-width: 250px;" type="text" class="form-control form-control-custom font_black ml-2" id="nameInput" aria-describedby="nameInputHelp" placeholder="Nhập tên sản phẩm...">
+                        <input style="max-width: 250px;" type="text" class="form-control form-control-custom font_black ml-2" id="nameInput" aria-describedby="nameInputHelp" placeholder="Nhập tên sản phẩm..." value="Nike Interact Run">
                         
                     </div>
 
@@ -135,69 +135,67 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Ảnh</th>
-                            <th>Tên</th>
-                            <th style="display: flex; align-items: center;">Số lượng bán ra
-                                <span id="sortQuantityAsc" class="btn-link btn-sm material-symbols-outlined ml-2" style="padding: 0px; font-size: 20px;">
-                                arrow_upward
-                                </span>
-                                <span id="sortQuantityDesc" class="btn-link btn-sm material-symbols-outlined ml-2" style="padding: 0px; font-size: 20px; transform: rotate(180deg);">
-                                    arrow_upward
-                                </span>
-                            </th>
-                            <th>Tổng tiền
-                                <span id="sortRevenueAsc" class="btn-link btn-sm material-symbols-outlined ml-2" style="padding: 0px; font-size: 20px;">
-                                    arrow_upward
-                                    </span>
-                                    <span id="sortRevenueDesc" class="btn-link btn-sm material-symbols-outlined ml-2" style="padding: 0px; font-size: 20px; transform: rotate(180deg);">
-                                        arrow_upward
-                                    </span>
-
-                            </th>
-                            <th>Chi tiết</th>
-                            
+                            <th>Mã đơn hàng</th>
+                            <th>Tên khách hàng</th>
+                            <th>Địa chỉ</th>
+                            <th>Số lượng đơn hàng</th>
+                            <th>Tổng tiền</th>
+                            <th>Trạng thái</th>
+                            <th>Thao tác</th>
                         </tr>
                     </thead>
-                    <tbody id="productTable">
+                    <tbody id="row1">
                         <tr>
-                            <td><image src="/img/adidas/shop-1.jpg" class="itemImage mr-3"></image></td>
-                            <td class="font-bold">Nike Interact Run</td>
-                            <td class="itemQuantity"><div style="margin-left: 40px;">25</div></td>
-                            <td class="font-red revenue">50.000.000 VNĐ</td>
-                            <td><a href="/admin_donhang.html" class="btn btn-primary">Xem</a>
+                            <td class="font-bold">Ashion001</td>
+                            <td class="font-bold">Nguyễn Văn B</td>
+                            <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
+                            <td>4</td>
+                            <td class="font-red">14.456.000 VNĐ</td>
+                            <td><div style="color: #28a745;font-weight: 600;">Đã giao thành công</div></td>
+                            <td>
+                                <a href="admin_chitietdonhang.html" class="btn btn-primary">Xem chi tiết</a>
+                              </td>                            
                             </td>
-                            
                         </tr>
-
+    
                         <tr>
-                            <td><image src="/img/nike/shop-10.jpg" class="itemImage mr-3"></image></td>
-                            <td class="font-bold">Nike Interact Run</td>
-                            <td class="itemQuantity"><div style="margin-left: 40px;">19</div></td>
-                            <td class="font-red revenue">25.200.000 VNĐ</td>
-                            <td><a href="/admin_donhang.html" class="btn btn-primary">Xem</a>
+                            <td class="font-bold">Ashion002</td>
+                            <td class="font-bold">Nguyễn Văn C</td>
+                            <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
+                            <td>5</td>
+                            <td class="font-red">15.456.000 VNĐ</td>
+                            <td><div style="color: #28a745;font-weight: 600;">Đã giao thành công</div></td>
+                            <td>
+                                <a href="admin_chitietdonhang.html" class="btn btn-primary">Xem chi tiết</a>
+                              </td>                            
                             </td>
-                            
                         </tr>
-
+    
                         <tr>
-                            <td><image src="/img/nike/shop-11.jpg" class="itemImage mr-3"></image></td>
-                            <td class="font-bold">Nike Airman Dn</td>
-                            <td class="itemQuantity"><div style="margin-left: 40px;">28</div></td>
-                            <td class="font-red revenue">24.000.000 VNĐ</td>
-                            <td><a href="/admin_donhang.html" class="btn btn-primary">Xem</a>
+                            <td class="font-bold">Ashion003</td>
+                            <td class="font-bold">Nguyễn Văn D</td>
+                            <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
+                            <td>7</td>
+                            <td class="font-red">16.456.000 VNĐ</td>
+                            <td><div style="color: #28a745;font-weight: 600;">Đã giao thành công</div></td>
+                            <td>
+                                <a href="admin_chitietdonhang.html" class="btn btn-primary">Xem chi tiết</a>
+                              </td>                            
                             </td>
-                            
                         </tr>
-
+    
                         <tr>
-                            <td><image src="/img/nike/shop-12.jpg" class="itemImage mr-3"></image></td>
-                            <td class="font-bold">Nike Impact</td>
-                            <td class="itemQuantity"><div style="margin-left: 40px;">27</div></td>
-                            <td class="font-red revenue">25.000.000 VNĐ</td>
-                            <td><a href="/admin_donhang.html" class="btn btn-primary">Xem</a>
+                            <td class="font-bold">Ashion004</td>
+                            <td class="font-bold">Nguyễn Văn A</td>
+                            <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
+                            <td>8</td>
+                            <td class="font-red">17.456.000 VNĐ</td>
+                            <td><div style="color: #28a745;font-weight: 600;">Đã giao thành công</div></td>
+                            <td>
+                                <a href="admin_chitietdonhang.html" class="btn btn-primary">Xem chi tiết</a>
+                              </td>                            
                             </td>
-                            
-                        </tr>
+                        </tr>   
                         
                     </tbody>
 
