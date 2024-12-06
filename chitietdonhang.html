@@ -37,16 +37,16 @@
     rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="/css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="/css/header.css" type="text/css">
-    <link rel="stylesheet" href="/css/chitietdonhang.css"/>
-    <link rel="stylesheet" href="/css/footer.css" type="text/css">  
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/header.css" type="text/css">
+    <link rel="stylesheet" href="css/chitietdonhang.css"/>
+    <link rel="stylesheet" href="css/footer.css" type="text/css">  
     
 </head>
 <style>
@@ -97,42 +97,38 @@
         <div class="row">
             <div class="col-xl-3 col-lg-2">
                 <div class="header__logo">
-                    <a href="/signInIndex.html"><img src="/img/logo.png" alt=""></a>
+                    <a href="signInIndex.html"><img src="img/logo.png" alt=""></a>
                 </div>
             </div>
-            <div class="col-xl-6 col-lg-7">
+            <div class="col-xl-6 col-lg-7 d-flex justify-content-center">
                 <nav class="header__menu">
                     <ul>
-                        <li class="active"><a href="/signInIndex.html">Trang chủ</a></li>
-                        <li><a href="/nike.html">Nike</a></li>
-                        <li><a href="/adidas.html">Adidas</a></li>
-                        <li><a href="/jordan.html">Jordan</a></li>
-                        <li><a href="/shop-cart.html">Giỏ hàng</a></li>
-                        <li><a href="/checkout.html">Checkout</a></li>
+                        <li><a href="signInIndex.html">Trang chủ</a></li>
+                        <li><a href="nike.html">Nike</a></li>
+                        <li><a href="adidas.html">Adidas</a></li>
+                        <li><a href="jordan.html">Jordan</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="col-lg-3">
                 <div class="header__right">
                     <div class="header__right__auth">
-                        
                         <div class="dropdown">
                             <span class="dropdown-userName">Xin chào Nguyễn Văn A</span>
                             <div class="dropdown-content">
-                                <a href="/thongtinnguoidung.html">Thông tin cá nhân</a>
-                                <a href="/thongtindonhang.html">Thông tin đơn hàng</a>
+                                <a href="thongtinnguoidung.html">Thông tin cá nhân</a>
+                                <a href="shop-cart.html">Giỏ hàng</a>
+                                <a href="thongtindonhang.html">Thông tin đơn hàng</a>
                                 <a href="#" id="logoutBtn" onclick="handleLogout()">Đăng xuất</a>
                             </div>
                         </div>
-                        
                     </div>
-
                     <ul class="header__right__widget">
                         <li><span class="icon_search search-switch"></span></li>
                         <li><a href="#"><span class="icon_heart_alt"></span>
                             <div class="tip">2</div>
                         </a></li>
-                        <li><a href="/dangnhap.html"><span class="icon_bag_alt"></span>
+                        <li><a href="#"><span class="icon_bag_alt"></span>
                             <div class="tip">2</div>
                         </a></li>
                     </ul>
@@ -153,7 +149,12 @@
         <div class="row">
             <div class="col-12">
                 <div class="custom-card">
-                    <h1 class="h1 mb-3 mt-3 text-dark">Số đơn hàng: Ashion001</h1>
+                    <div class="d-flex justify-content-between align-items-center mb-3 mt-3">
+                        <h1 class="h1 text-dark" style="text-align: left;">Số đơn hàng: Ashion001</h1>
+                        <a type="button" href="thongtindonhang.html" class="btn btn-update text-white bg-danger" style="padding: 10px;font-size: 16px;">
+                            Trở về
+                        </a>
+                      </div>
                     <div class="card rounded-5 p-3" style="display: 16px; border-radius: 5px;">
                         <p>Ngày đặt hàng: 25/01/2024</p>
                         <p>Trạng thái: <b class="mark-success">Đơn hàng giao thành công</b></p>
@@ -207,7 +208,7 @@
                             <div class="row">
                                 <div class="col-7">
                                     <div class="row d-flex align-items-center">
-                                        <img src="/img/nike/shop-10.jpg" width="80" height="80">
+                                        <img src="img/nike/shop-10.jpg" width="80" height="80">
                                         <div class="ml-5">
                                             <br><b>Nike Interact Run</b></br>
                                             Đen, Free Size
@@ -227,7 +228,7 @@
                             <div class="row">
                                 <div class="col-7">
                                     <div class="row d-flex align-items-center">
-                                        <img src="/img/nike/shop-18.jpg" width="80" height="80">
+                                        <img src="img/nike/shop-18.jpg" width="80" height="80">
                                         <div class="ml-5">
                                             <br><b>Air Jordan 1 Low</b></br>
                                             Đen, 42
@@ -249,7 +250,7 @@
                             <div class="row">
                                 <div class="col-7">
                                     <div class="row d-flex align-items-center">
-                                        <img src="/img/nike/shop-13.jpg" width="80" height="80">
+                                        <img src="img/nike/shop-13.jpg" width="80" height="80">
                                         <div class="ml-5">
                                             <br><b>Air Jordan 4 RM</b></br>
                                             Đen, 42
@@ -271,7 +272,7 @@
                             <div class="row">
                                 <div class="col-7">
                                     <div class="row d-flex align-items-center">
-                                        <img src="/img/nike/shop-17.jpg" width="80" height="80">
+                                        <img src="img/nike/shop-17.jpg" width="80" height="80">
                                         <div class="ml-5">
                                             <br><b>Nike Air Max DN</b></br>
                                             Đen, 42
@@ -322,7 +323,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="/img/instagram/2.jpg">
+                <div class="instagram__item set-bg" data-setbg="img/instagram/2.jpg">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
@@ -330,7 +331,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="/img/instagram/6.jpg">
+                <div class="instagram__item set-bg" data-setbg="img/instagram/6.jpg">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
@@ -338,7 +339,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="/img/instagram/9.jpg">
+                <div class="instagram__item set-bg" data-setbg="img/instagram/9.jpg">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
@@ -346,7 +347,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="/img/instagram/11.png">
+                <div class="instagram__item set-bg" data-setbg="img/instagram/11.png">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
@@ -354,7 +355,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="/img/instagram/15.jpg">
+                <div class="instagram__item set-bg" data-setbg="img/instagram/15.jpg">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
@@ -362,7 +363,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="/img/instagram/7.jpg">
+                <div class="instagram__item set-bg" data-setbg="img/instagram/7.jpg">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
@@ -381,15 +382,15 @@
             <div class="col-lg-4 col-md-6 col-sm-7">
                 <div class="footer__about">
                     <div class="footer__logo">
-                        <a href="./index.html"><img src="/img/logo.png" alt=""></a>
+                        <a href="signInIndex.html"><img src="img/logo.png" alt=""></a>
                     </div>
                     <p>Trang web bán giày chuyên cung cấp các mẫu giày thời trang, đa dạng từ thể thao đến công sở. Sản phẩm đảm bảo chất lượng cao, với nhiều lựa chọn về kiểu dáng và kích cỡ phù hợp cho mọi lứa tuổi.</p>
                     <div class="footer__payment">
-                        <a href="#"><img src="/img/payment/payment-1.png" alt=""></a>
-                        <a href="#"><img src="/img/payment/payment-2.png" alt=""></a>
-                        <a href="#"><img src="/img/payment/payment-3.png" alt=""></a>
-                        <a href="#"><img src="/img/payment/payment-4.png" alt=""></a>
-                        <a href="#"><img src="/img/payment/payment-5.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-1.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-2.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-3.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-4.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-5.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -452,17 +453,17 @@
 
 </script>
 <!-- Javascript -->
-<script src="/js/jquery-3.3.1.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/jquery.magnific-popup.min.js"></script>
-<script src="/js/jquery-ui.min.js"></script>
-<script src="/js/mixitup.min.js"></script>
-<script src="/js/jquery.countdown.min.js"></script>
-<script src="/js/jquery.slicknav.js"></script>
-<script src="/js/owl.carousel.min.js"></script>
-<script src="/js/jquery.nicescroll.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/authen.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/authen.js"></script>
 </body>
 
 </html>

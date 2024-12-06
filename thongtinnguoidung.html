@@ -37,17 +37,17 @@
     rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="/css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="/css/header.css" type="text/css">
-    <link rel="stylesheet" href="/css/donhang.css"/>
-    <link rel="stylesheet" href="/css/footer.css" type="text/css">  
-    <link rel="stylesheet" href="/css/admin_nguoidung.css" type="text/css">  
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/header.css" type="text/css">
+    <link rel="stylesheet" href="css/donhang.css"/>
+    <link rel="stylesheet" href="css/footer.css" type="text/css">  
+    <link rel="stylesheet" href="css/admin_nguoidung.css" type="text/css">  
     
     
 </head>
@@ -99,41 +99,38 @@
         <div class="row">
             <div class="col-xl-3 col-lg-2">
                 <div class="header__logo">
-                    <a href="/index.html"><img src="/img/logo.png" alt=""></a>
+                    <a href="signInIndex.html"><img src="img/logo.png" alt=""></a>
                 </div>
             </div>
-            <div class="col-xl-6 col-lg-7">
+            <div class="col-xl-6 col-lg-7 d-flex justify-content-center">
                 <nav class="header__menu">
                     <ul>
-                        <li class="active"><a href="/index.html">Trang chủ</a></li>
-                        <li><a href="/nike.html">Nike</a></li>
-                        <li><a href="/adidas.html">Adidas</a></li>
-                        <li><a href="/jordan.html">Jordan</a></li>
-                        <li><a href="/shop-cart.html">Giỏ hàng</a></li>
-                        <li><a href="/checkout.html">Checkout</a></li>
+                        <li><a href="signInIndex.html">Trang chủ</a></li>
+                        <li><a href="nike.html">Nike</a></li>
+                        <li><a href="adidas.html">Adidas</a></li>
+                        <li><a href="jordan.html">Jordan</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="col-lg-3">
                 <div class="header__right">
                     <div class="header__right__auth">
-                        
                         <div class="dropdown">
                             <span class="dropdown-userName">Xin chào Nguyễn Văn A</span>
                             <div class="dropdown-content">
-                                <a href="/thongtinnguoidung.html">Thông tin cá nhân</a>
-                                <a href="/thongtindonhang.html">Thông tin đơn hàng</a>
+                                <a href="thongtinnguoidung.html">Thông tin cá nhân</a>
+                                <a href="shop-cart.html">Giỏ hàng</a>
+                                <a href="thongtindonhang.html">Thông tin đơn hàng</a>
                                 <a href="#" id="logoutBtn" onclick="handleLogout()">Đăng xuất</a>
                             </div>
                         </div>
                     </div>
-
                     <ul class="header__right__widget">
                         <li><span class="icon_search search-switch"></span></li>
                         <li><a href="#"><span class="icon_heart_alt"></span>
                             <div class="tip">2</div>
                         </a></li>
-                        <li><a href="/dangnhap.html"><span class="icon_bag_alt"></span>
+                        <li><a href="#"><span class="icon_bag_alt"></span>
                             <div class="tip">2</div>
                         </a></li>
                     </ul>
@@ -190,11 +187,11 @@
 
                             <div class="row justify-content-center align-items-center">
                                 <!-- Button trigger modal -->
-                                <a type="button" href="/signInIndex.html" class="btn btn-update text-white bg-danger" style="padding: 10px;">
+                                <a type="button" href="signInIndex.html" class="btn btn-update text-white bg-danger" style="padding: 10px;">
                                     Đóng
                                 </a> 
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-update text-white ml-5" style="padding: 10px;" onclick="confirmUpdate('Bạn có muốn cập nhật thông tin không?','/thongtinnguoidung.html')">
+                                <button type="button" class="btn btn-update text-white ml-5" style="padding: 10px;" onclick="confirmUpdate('Bạn có muốn cập nhật thông tin không?','thongtinnguoidung.html')">
                                     Cập Nhật
                                 </button>
                             </div>
@@ -215,7 +212,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <image class="modal-title" id="exampleModalLongTitle" src="/img/icons8-yes-240.png" width="80" height="80"></image>
+                    <image class="modal-title" id="exampleModalLongTitle" src="img/icons8-yes-240.png" width="80" height="80"></image>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size: 50px; line-height: 1; padding: 0.5rem;">
                         <span aria-hidden="true" style="font-size: 50px;">&times;</span>
                     </button>
@@ -241,7 +238,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="/img/instagram/2.jpg">
+                <div class="instagram__item set-bg" data-setbg="img/instagram/2.jpg">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
@@ -249,7 +246,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="/img/instagram/6.jpg">
+                <div class="instagram__item set-bg" data-setbg="img/instagram/6.jpg">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
@@ -257,7 +254,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="/img/instagram/9.jpg">
+                <div class="instagram__item set-bg" data-setbg="img/instagram/9.jpg">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
@@ -265,7 +262,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="/img/instagram/11.png">
+                <div class="instagram__item set-bg" data-setbg="img/instagram/11.png">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
@@ -273,7 +270,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="/img/instagram/15.jpg">
+                <div class="instagram__item set-bg" data-setbg="img/instagram/15.jpg">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
@@ -281,7 +278,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                <div class="instagram__item set-bg" data-setbg="/img/instagram/7.jpg">
+                <div class="instagram__item set-bg" data-setbg="img/instagram/7.jpg">
                     <div class="instagram__text">
                         <i class="fa fa-instagram"></i>
                         <a href="https://www.instagram.com/minhla.tu/" target="_blank">@nhom4</a>
@@ -300,15 +297,15 @@
             <div class="col-lg-4 col-md-6 col-sm-7">
                 <div class="footer__about">
                     <div class="footer__logo">
-                        <a href="./index.html"><img src="/img/logo.png" alt=""></a>
+                        <a href="signInIndex.html"><img src="img/logo.png" alt=""></a>
                     </div>
                     <p>Trang web bán giày chuyên cung cấp các mẫu giày thời trang, đa dạng từ thể thao đến công sở. Sản phẩm đảm bảo chất lượng cao, với nhiều lựa chọn về kiểu dáng và kích cỡ phù hợp cho mọi lứa tuổi.</p>
                     <div class="footer__payment">
-                        <a href="#"><img src="/img/payment/payment-1.png" alt=""></a>
-                        <a href="#"><img src="/img/payment/payment-2.png" alt=""></a>
-                        <a href="#"><img src="/img/payment/payment-3.png" alt=""></a>
-                        <a href="#"><img src="/img/payment/payment-4.png" alt=""></a>
-                        <a href="#"><img src="/img/payment/payment-5.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-1.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-2.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-3.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-4.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-5.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -371,19 +368,19 @@
 
 </script>
 <!-- Javascript -->
-<script src="/js/donhang.js"></script>
-<script src="/js/jquery-3.3.1.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/jquery.magnific-popup.min.js"></script>
-<script src="/js/jquery-ui.min.js"></script>
-<script src="/js/mixitup.min.js"></script>
-<script src="/js/jquery.countdown.min.js"></script>
-<script src="/js/jquery.slicknav.js"></script>
-<script src="/js/owl.carousel.min.js"></script>
-<script src="/js/jquery.nicescroll.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/authen.js"></script>
-<script src="/js/admin.js"></script>
+<script src="js/donhang.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/authen.js"></script>
+<script src="js/admin.js"></script>
 </body>
 
 </html>
