@@ -132,7 +132,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr id="row1">
                                     <td class="cart__product__item">
                                         <img src="img/nike/shop-17.jpg" width="90" height="90" alt="">
                                         <div class="cart__product__item__title">
@@ -153,9 +153,9 @@
                                         </div>
                                     </td>
                                     <td class="cart__total">2.349.000 đ</td>
-                                    <td class="cart__close"><span class="icon_close"></span></td>
+                                    <td class="cart__close"><span class="icon_close" onclick="confirmDelete('row1')"></span></td>
                                 </tr>
-                                <tr>
+                                <tr id="row2">
                                     <td class="cart__product__item">
                                         <img src="img/jordan/shop-21.jpg" width="90" height="90" alt="">
                                         <div class="cart__product__item__title">
@@ -176,9 +176,9 @@
                                         </div>
                                     </td>
                                     <td class="cart__total">4.409.000₫</td>
-                                    <td class="cart__close"><span class="icon_close"></span></td>
+                                    <td class="cart__close"><span class="icon_close" onclick="confirmDelete('row2')"></span></td>
                                 </tr>
-                                <tr>
+                                <tr id="row3">
                                     <td class="cart__product__item">
                                         <img src="img/jordan/shop-20.jpg" width="90" height="90" alt="">
                                         <div class="cart__product__item__title">
@@ -199,9 +199,9 @@
                                         </div>
                                     </td>
                                     <td class="cart__total">3.239.000 đ</td>
-                                    <td class="cart__close"><span class="icon_close"></span></td>
+                                    <td class="cart__close"><span class="icon_close" onclick="confirmDelete('row3')"></span></td>
                                 </tr>
-                                <tr>
+                                <tr id="row4">
                                     <td class="cart__product__item">
                                         <img src="img/nike/shop-15.jpg" width="90" height="90" alt="">
                                         <div class="cart__product__item__title">
@@ -222,7 +222,7 @@
                                         </div>
                                     </td>
                                     <td class="cart__total">4.409.000 đ</td>
-                                    <td class="cart__close"><span class="icon_close"></span></td>
+                                    <td class="cart__close"><span class="icon_close" onclick="confirmDelete('row4')"></span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -232,7 +232,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="cart__btn">
-                        <a href="/index.html">Tiếp tục mua hàng</a>
+                        <a href="/signInIndex.html">Tiếp tục mua hàng</a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -401,16 +401,18 @@
     <!-- Search End -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/mixitup.min.js"></script>
+    <script src="/js/jquery.countdown.min.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/jquery.nicescroll.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/admin.js"></script>
+
 </body>
 
 </html>

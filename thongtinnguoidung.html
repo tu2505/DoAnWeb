@@ -186,11 +186,18 @@
                                 <label for="passInput">Mật khẩu</label>
                                 <input type="password" class="form-control form-control-custom" id="passInput" aria-describedby="passInputHelp" placeholder="Điền vào mật khẩu" value="0123554">
                               </div>
-                              
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-update w-100 text-white" data-toggle="modal" data-target="#exampleModalCenter">
-                                Cập Nhật
-                            </button>
+                            
+
+                            <div class="row justify-content-center align-items-center">
+                                <!-- Button trigger modal -->
+                                <a type="button" href="/signInIndex.html" class="btn btn-update text-white bg-danger" style="padding: 10px;">
+                                    Đóng
+                                </a> 
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-update text-white ml-5" style="padding: 10px;" onclick="confirmUpdate('Bạn có muốn cập nhật thông tin không?','/thongtinnguoidung.html')">
+                                    Cập Nhật
+                                </button>
+                            </div>
 
                         </form>
 
@@ -376,6 +383,7 @@
 <script src="/js/jquery.nicescroll.min.js"></script>
 <script src="/js/main.js"></script>
 <script src="/js/authen.js"></script>
+<script src="/js/admin.js"></script>
 </body>
 
 </html>
