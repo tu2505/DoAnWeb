@@ -15,6 +15,8 @@
     rel="stylesheet">
 
     <!-- Css Styles -->
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css">
@@ -64,15 +66,13 @@
                         <a href="/signInIndex.html"><img src="/img/logo.png" alt=""></a>
                     </div>
                 </div>
-                <div class="col-xl-6 col-lg-7">
+                <div class="col-xl-6 col-lg-7 d-flex justify-content-center">
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="/signInIndex.html">Trang chủ</a></li>
                             <li><a href="/nike.html">Nike</a></li>
                             <li><a href="/adidas.html">Adidas</a></li>
                             <li><a href="/jordan.html">Jordan</a></li>
-                            <li><a href="/shop-cart.html">Giỏ hàng</a></li>
-                            <li><a href="/checkout.html">Checkout</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -83,6 +83,7 @@
                                 <span class="dropdown-userName">Xin chào Nguyễn Văn A</span>
                                 <div class="dropdown-content">
                                     <a href="/thongtinnguoidung.html">Thông tin cá nhân</a>
+                                    <a href="/shop-cart.html">Giỏ hàng</a>
                                     <a href="/thongtindonhang.html">Thông tin đơn hàng</a>
                                     <a href="#" id="logoutBtn" onclick="handleLogout()">Đăng xuất</a>
                                 </div>
@@ -139,15 +140,19 @@
                                 <h4>Mua theo loại</h4>
                             </div>
                             <div class="categories__accordion">
-                                <form>
-                                    <label for="loai" class="required">Loại : </label>
-                                    <select id="loai" name="loai" required>
-                                      <option value="loai1">Tất cả</option>
-                                      <option value="loai2">Nike</option>
-                                      <option value="loai3">Adidas</option>
-                                      <option value="loai4">Jordan</option>
-                                    </select>
-                                </form>
+                                <div class="btn-group">
+                                    <button id="dropdownButton" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #F0F0F0;">
+                                      Tất cả
+                                    </button>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="#" onclick="changeText('Nike')">Nike</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#" onclick="changeText('Adidas')">Adidas</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#" onclick="changeText('Jordan')">Jordan</a>
+                                    </div>
+                                  </div>
+                                  
                             </div>
                         </div>
                         <div class="sidebar__filter">
@@ -529,6 +534,13 @@
         </div>
     </div>
     <!-- Search End -->
+
+    <script>
+        function changeText(selectedText) {
+  // Cập nhật nội dung button khi một mục được chọn
+  document.getElementById("dropdownButton").textContent = selectedText;
+}
+    </script>
 
     <!-- Js Plugins -->
     <script src="/js/jquery-3.3.1.min.js"></script>

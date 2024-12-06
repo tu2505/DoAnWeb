@@ -160,7 +160,7 @@
                         <td><button class="btn btn-primary">Sửa</button>
                             <button class="btn btn-danger" onclick="confirmDelete('row1')">Xóa</button>
                         </td>
-                        <td> <input type="checkbox" id="exampleCheck1" class="ml-3"></td>
+                        <td> <input type="checkbox" id="exampleCheck1" class="ml-3" onclick="confirmCheck(event)"></td>
                     </tr>
                     
                 </tbody>
@@ -177,7 +177,7 @@
                             <button class="btn btn-danger" onclick="confirmDelete('row2')">Xóa</button>
                             
                         </td>
-                        <td> <input type="checkbox" id="exampleCheck1" class="ml-3"></td>
+                        <td> <input type="checkbox" id="exampleCheck1" class="ml-3" onclick="confirmCheck(event)"></td>
                     </tr>
                     
                 </tbody>
@@ -193,7 +193,7 @@
                         <td><button class="btn btn-primary">Sửa</button>
                             <button class="btn btn-danger" onclick="confirmDelete('row3')">Xóa</button>
                         </td>
-                        <td> <input type="checkbox" id="exampleCheck1" class="ml-3"></td>
+                        <td> <input type="checkbox" id="exampleCheck1" class="ml-3" onclick="confirmCheck(event)"></td>
                     </tr>
                     
                 </tbody>
@@ -218,7 +218,32 @@
 
 
 
+    <script>
+        function confirmCheck(event) {
+            const checkbox = event.target;
 
+            // Lấy trạng thái trước khi nhấp
+            const isCurrentlyChecked = !checkbox.checked;
+            console.log("Trạng thái trước khi nhấp:", isCurrentlyChecked);
+
+            // Hiển thị dialog xác nhận
+            const action = isCurrentlyChecked
+                ? "Bạn có muốn mở khóa người dùng này?"
+                : "Bạn có muốn khóa người dùng này?";
+            const isConfirmed = confirm(action);
+
+            if (isConfirmed) {
+                // Nếu người dùng đồng ý, trạng thái sẽ thay đổi bình thường
+                checkbox.checked = !isCurrentlyChecked;
+                alert(isCurrentlyChecked ? "Mở khóa thành công!" : "Khóa thành công!");
+            } else {
+                // Ngăn checkbox thay đổi trạng thái
+                event.preventDefault();
+                alert("Hủy bỏ thành công!");
+            }
+        }
+
+    </script>
 
 
 

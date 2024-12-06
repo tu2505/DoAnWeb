@@ -73,3 +73,13 @@ function confirmAdd(confirmMessage,link) {
       alert("Hủy bỏ thành công.");
   }
 }
+
+function customConfirm(confirmMessage,successAlertMessage,failAlertMessage,link){
+  const result = confirm(confirmMessage);
+  if (result) {
+      alert(successAlertMessage);
+      window.location.href=link;
+  } else {
+    alert(failAlertMessage);
+  }
+}
