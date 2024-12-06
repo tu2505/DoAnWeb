@@ -97,8 +97,16 @@
             <!-- Aside -->
             <aside class="col-2 p-3" style="background-color: #f8f9fa;">
                 <div class="navMenu">
-                    <h5 class="navMenu-item">Quản lý sản phẩm</h5>
-                    <h5 class="navMenu-item">Quản lý đơn hàng</h5>
+                    <div class="navMenu">
+                        <h5><a href="/admin_sanpham_1.html" class="navMenu-item">Quản lý sản phẩm</a></h5>
+                        <h5><a href="/admin_donhang.html" class="navMenu-item" >Quản lý đơn hàng</a></h5>
+                        <h5><a href="/admin_nguoidung_1.html" class="navMenu-item">Quản lý người dùng</a></h5>
+                        <h5><a href="/admin_thongkesanpham.html" class="navMenu-item">Thống kê sản phẩm</a></h5>
+                        <h5><a href="/admin_thongkenguoidung.html" class="navMenu-item"style="background-color: rgb(218, 218, 218); /* Màu nền khi hover */
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                            color: black;
+                            font-weight: 600;">Thống kê khách hàng</a></h5>
+                    </div>
                 </div>
             </aside>
     
@@ -111,14 +119,14 @@
                 <div class="row mb-3" style="padding: 12px;">
                     <div class="col d-flex justify-content-start align-items-center">
                         <div class="font-bold">Từ:</div>
-                        <input type="date" class="ml-2">
+                        <input type="date" class="ml-2" value="2024-01-12">
                         <div class="font-bold ml-2 mr-2">đến</div>
-                        <input type="date">
+                        <input type="date" value="2024-05-12">
                     </div>
 
                     <div class="col d-flex justify-content-start align-items-center">
                         <div class="font-bold">Tên khách hàng:</div>
-                        <input style="max-width: 250px;" type="text" class="form-control form-control-custom font_black ml-2" id="nameInput" aria-describedby="nameInputHelp" placeholder="Nhập tên khách hàng..." value="Nguyễn Văn A">
+                        <input style="max-width: 250px;" type="text" c`lass="form-control form-control-custom font_black ml-2" id="nameInput" aria-describedby="nameInputHelp" placeholder="Nhập tên khách hàng..." value="Nguyễn Văn A">
                         
                     </div>
 
