@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/header.css" type="text/css">
+
 </head>
 
 <body>
@@ -45,11 +47,12 @@
             </a></li>
         </ul>
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <a href="signInIndex.html"><img src="img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__auth">
-            <a href="./dangnhap.html">Đăng nhập</a>
+            <a href="#">Login</a>
+            <a href="#">Register</a>
         </div>
     </div>
     <!-- Offcanvas Menu End -->
@@ -60,26 +63,31 @@
             <div class="row">
                 <div class="col-xl-3 col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="signInIndex.html"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
-                <div class="col-xl-6 col-lg-7">
+                <div class="col-xl-6 col-lg-7 d-flex justify-content-center">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./nike.html">Nike</a></li>
-                            <li><a href="./adidas.html">Adidas</a></li>
-                            <li><a href="./jordan.html">Jordan</a></li>
-                            <li><a href="./shop-cart.html">Giỏ hàng</a></li>
-                            <li><a href="./checkout.html">Checkout</a></li>
-                            <li><a href="./contact.html">Liên hệ</a></li>
+                            <li><a href="signInIndex.html">Trang chủ</a></li>
+                            <li><a href="nike.html">Nike</a></li>
+                            <li><a href="adidas.html">Adidas</a></li>
+                            <li><a href="jordan.html">Jordan</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-lg-3">
                     <div class="header__right">
                         <div class="header__right__auth">
-                            <a href="./dangnhap.html">Đăng nhập</a>
+                            <div class="dropdown">
+                                <span class="dropdown-userName">Xin chào Nguyễn Văn A</span>
+                                <div class="dropdown-content">
+                                    <a href="thongtinnguoidung.html">Thông tin cá nhân</a>
+                                    <a href="shop-cart.html">Giỏ hàng</a>
+                                    <a href="thongtindonhang.html">Thông tin đơn hàng</a>
+                                    <a href="#" id="logoutBtn" onclick="handleLogout()">Đăng xuất</a>
+                                </div>
+                            </div>
                         </div>
                         <ul class="header__right__widget">
                             <li><span class="icon_search search-switch"></span></li>
@@ -106,7 +114,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
-                        <a href="./index.html"><i class="fa fa-home"></i> Trang chủ</a>
+                        <a href="signInIndex.html"><i class="fa fa-home"></i> Trang chủ</a>
                         <span>Giỏ hàng</span>
                     </div>
                 </div>
@@ -232,7 +240,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="cart__btn">
-                        <a href="/signInIndex.html">Tiếp tục mua hàng</a>
+                        <a href="signInIndex.html">Tiếp tục mua hàng</a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -258,7 +266,7 @@
                             <li>Subtotal <span>14.406.000 đ</span></li>
                             <li>Total <span>14.406.000 đ</span></li>
                         </ul>
-                        <a href="./checkout.html" class="primary-btn">Xác nhận đơn hàng</a>
+                        <a href="checkout.html" class="primary-btn">Xác nhận đơn hàng</a>
                     </div>
                 </div>
             </div>
@@ -330,7 +338,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-7">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                            <a href="signInIndex.html"><img src="img/logo.png" alt=""></a>
                         </div>
                         <p>Trang web bán giày chuyên cung cấp các mẫu giày thời trang, đa dạng từ thể thao đến công sở. Sản phẩm đảm bảo chất lượng cao, với nhiều lựa chọn về kiểu dáng và kích cỡ phù hợp cho mọi lứa tuổi.</p>
                         <div class="footer__payment">
@@ -394,24 +402,24 @@
             <div class="search-close-switch">+</div>
             <form class="search-model-form">
                 <input type="text" id="search-input" placeholder="Giày giá rẻ">
-                <a href="./shop.html" class="cart-btn"><span class="icon_bag_alt"></span> Tìm</a>
+                <a href="shop.html" class="cart-btn"><span class="icon_bag_alt"></span> Tìm</a>
             </form>
         </div>
     </div>
     <!-- Search End -->
 
     <!-- Js Plugins -->
-    <script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/jquery.magnific-popup.min.js"></script>
-    <script src="/js/jquery-ui.min.js"></script>
-    <script src="/js/mixitup.min.js"></script>
-    <script src="/js/jquery.countdown.min.js"></script>
-    <script src="/js/jquery.slicknav.js"></script>
-    <script src="/js/owl.carousel.min.js"></script>
-    <script src="/js/jquery.nicescroll.min.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/admin.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
 
 </body>
 

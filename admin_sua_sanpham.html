@@ -117,17 +117,31 @@
                         <div class="card form-border rounded-5 p-3" style="border-radius: 5px;">
     
                             <form>
-                                <div class="mb-3">
-                                    <button type="button" class="btn btn-secondary" onclick="document.getElementById('imageUpload').click()">
-                                        Chọn ảnh
+                                <div class="mb-3" style="display: flex; align-items: center;">  
+                                    <button type="button" class="btn btn-secondary mt-2" onclick="document.getElementById('imageUpload1').click()">
+                                        Chọn ảnh 1
                                     </button>
-                                    <input type="file" id="imageUpload" accept="image/*" onchange="previewImage(event)" style="display: none;">
+                                    <input type="file" id="imageUpload1" accept="image/*" onchange="previewImage(event, 'fileName1')" style="display: none;">
+                                    <!-- Phần tử hiển thị tên file -->
+                                    <div id="fileName1" class="mt-2" style="display: inline-block; margin-left: 10px;">adidas1.jpg</div>
                                 </div>
-    
-                                <!-- Khu vực hiển thị ảnh -->
-                                <div id="imagePreviewContainer" class="mt-4 mb-4 d-flex flex-column align-items-center text-center">
-                                    <p>Ảnh bạn đã chọn:</p>
-                                    <img id="imagePreview" class="img-thumbnail" style="max-width: 300px;" src="/img/adidas/shop-1.jpg">
+
+                                <div class="mb-3" style="display: flex; align-items: center;">  
+                                    <button type="button" class="btn btn-secondary mt-2" onclick="document.getElementById('imageUpload2').click()">
+                                        Chọn ảnh 2
+                                    </button>
+                                    <input type="file" id="imageUpload2" accept="image/*" onchange="previewImage(event, 'fileName2')" style="display: none;">
+                                    <!-- Phần tử hiển thị tên file -->
+                                    <div id="fileName2" class="mt-2" style="display: inline-block; margin-left: 10px;">adidas2.jpg</div>
+                                </div>
+
+                                <div class="mb-3" style="display: flex; align-items: center;">  
+                                    <button type="button" class="btn btn-secondary mt-2" onclick="document.getElementById('imageUpload3').click()">
+                                        Chọn ảnh 3
+                                    </button>
+                                    <input type="file" id="imageUpload3" accept="image/*" onchange="previewImage(event, 'fileName3')" style="display: none;">
+                                    <!-- Phần tử hiển thị tên file -->
+                                    <div id="fileName3" class="mt-2" style="display: inline-block; margin-left: 10px;">adidas3.jpg</div>
                                 </div>
     
                                 <div class="form-group mb-4">
@@ -152,6 +166,37 @@
                                             <input class="form-control form-control-custom form-border font_black" type="number" id="numberInput" placeholder="Nhập số lượng" value="4">
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group mb-4">
+                                            <div class="mb-3">
+                                                <label for="multiLineText" class="form-label">Chi tiết sản phẩm</label>
+                                                <textarea id="multiLineText" class="form-control form-border font_black" rows="4" placeholder="Nhập văn bản tại đây...">Màu sắc hiển thị: Đen/Trắng
+Mã kiểu: FQ4112-001
+Xuất xứ: Indonesia
+                                                    </textarea>
+                                            </div>                                                    
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group mb-4">
+                                            <div class="mb-3">
+                                                <label for="multiLineText" class="form-label">Thông tin chi tiết</label>
+                                                <textarea id="multiLineText" class="form-control form-borde font_black" rows="4" placeholder="Nhập văn bản tại đây...">Dễ dàng xỏ vào
+Hệ thống điều chỉnh sử dụng cơ chế kéo và thả đơn giản, cho phép bạn thắt chặt giày nhanh chóng chỉ với một tay.
+Đệm bọt êm ái
+Đế giữa bằng bọt mang lại cảm giác êm ái, mượt mà khi di chuyển. Phần mũi giày cũng rộng hơn so với phiên bản 6, giúp ngón chân không bị chật hay bó.
+Cảm giác mềm mại
+Chúng tôi đã thêm các miếng đệm ở gót giày có thể nhìn thấy từ bên ngoài. Chúng mềm mại khi chạm vào và giúp tạo sự thoải mái cho gân Achilles. Các điểm chạm trên lưỡi giày mang lại cảm giác tự nhiên khi bạn cất bước.
+Độ bám chắc chắn
+Đế ngoài có hoa văn bám độc đáo kết hợp với các núm cao su để giúp bạn bám tốt khi đi lên hoặc xuống dốc.
+                                                </textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
         
                                 <div class="mb-3">

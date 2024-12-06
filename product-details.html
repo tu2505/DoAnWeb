@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/header.css" type="text/css">
 </head>
 
 <body>
@@ -45,7 +46,7 @@
             </a></li>
         </ul>
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <a href="signInIndex.html"><img src="img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__auth">
@@ -61,26 +62,31 @@
             <div class="row">
                 <div class="col-xl-3 col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="signInIndex.html"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
-                <div class="col-xl-6 col-lg-7">
+                <div class="col-xl-6 col-lg-7 d-flex justify-content-center">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Trang chủ</a></li>
-                            <li><a href="./nike.html">Nike</a></li>
-                            <li><a href="./adidas.html">Adidas</a></li>
-                            <li><a href="./jordan.html">Jordan</a></li>
-                            <li><a href="./shop-cart.html">Giỏ hàng</a></li>
-                            <li><a href="./checkout.html">Checkout</a></li>
-                            <li><a href="./contact.html">Liên hệ</a></li>
+                            <li><a href="signInIndex.html">Trang chủ</a></li>
+                            <li><a href="nike.html">Nike</a></li>
+                            <li><a href="adidas.html">Adidas</a></li>
+                            <li><a href="jordan.html">Jordan</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-lg-3">
                     <div class="header__right">
                         <div class="header__right__auth">
-                            <a href="#">Đăng nhập</a>
+                            <div class="dropdown">
+                                <span class="dropdown-userName">Xin chào Nguyễn Văn A</span>
+                                <div class="dropdown-content">
+                                    <a href="thongtinnguoidung.html">Thông tin cá nhân</a>
+                                    <a href="shop-cart.html">Giỏ hàng</a>
+                                    <a href="thongtindonhang.html">Thông tin đơn hàng</a>
+                                    <a href="#" id="logoutBtn" onclick="handleLogout()">Đăng xuất</a>
+                                </div>
+                            </div>
                         </div>
                         <ul class="header__right__widget">
                             <li><span class="icon_search search-switch"></span></li>
@@ -107,9 +113,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
-                        <a href="./index.html"><i class="fa fa-home"></i> Trang chủ</a>
-                        <a href="./nike.html">Nike’s </a>
-                        <span>Nike Revolution 7 EasyOn Men's Road Running Shoes</span>
+                        <a href="signInIndex.html"><i class="fa fa-home"></i> Trang chủ</a>
+                        <span>Nike</span>
                     </div>
                 </div>
             </div>
@@ -175,13 +180,12 @@
                                     <input type="text" value="1">
                                 </div>
                             </div>
-                            <a href="#" class="cart-btn"><span class="icon_bag_alt"></span> Add to cart</a>
-                            <ul>
-                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                                <li><a href="#"><span class="icon_adjust-horiz"></span></a></li>
-                            </ul>
+                            <button href="#" class="btn btn-danger cart-btn" onclick="customConfirm('Bạn có muốn thêm vào giỏ hàng?',
+                                'Thêm vào giỏ hàng thành công.','Hủy bỏ thành công','shop-cart.html'
+                            )"><span class="icon_bag_alt"></span>Thêm vào giỏ hàng</a>
+                            
                         </div>
-                        <div class="product__details__widget">
+                        <!-- <div class="product__details__widget">
                             <ul>
                                 <li>
                                     <span>Hàng:</span>
@@ -232,7 +236,7 @@
                                     <p>Miễn phí</p>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-12">
@@ -283,7 +287,7 @@
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="./product-details.html">Nike Air Max Plus Utility Black</a></h6>
+                            <h6><a href="product-details.html">Nike Air Max Plus Utility Black</a></h6>
                             <div class="rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -305,7 +309,7 @@
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="./product-details.html">Yeezy 350 V2 “Yeichel”</a></h6>
+                            <h6><a href="product-details.html">Yeezy 350 V2 “Yeichel”</a></h6>
                             <div class="rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -328,7 +332,7 @@
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="./product-details.html">NikeCourt Vision Mid</a></h6>
+                            <h6><a href="product-details.html">NikeCourt Vision Mid</a></h6>
                             <div class="rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -431,10 +435,9 @@
                 <div class="col-lg-4 col-md-6 col-sm-7">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                            <a href="signInIndex.html"><img src="img/logo.png" alt=""></a>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        cilisis.</p>
+                        <p>Trang web bán giày chuyên cung cấp các mẫu giày thời trang, đa dạng từ thể thao đến công sở. Sản phẩm đảm bảo chất lượng cao, với nhiều lựa chọn về kiểu dáng và kích cỡ phù hợp cho mọi lứa tuổi.</p>
                         <div class="footer__payment">
                             <a href="#"><img src="img/payment/payment-1.png" alt=""></a>
                             <a href="#"><img src="img/payment/payment-2.png" alt=""></a>
@@ -468,17 +471,11 @@
                 </div>
                 <div class="col-lg-4 col-md-8 col-sm-8">
                     <div class="footer__newslatter">
-                        <h6>NEWSLETTER</h6>
-                        <form action="#">
-                            <input type="text" placeholder="Email">
-                            <button type="submit" class="site-btn">Subscribe</button>
-                        </form>
                         <div class="footer__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                            <h6>Theo dõi chúng tôi tại</h6>
+                            <a href="https://www.facebook.com/BlueTuh" target="_blank"><i class="fa fa-facebook"></i></a>                        
+                            <a href="https://www.youtube.com/@bluetuhgaming2810" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.instagram.com/minhla.tu/" target="_blank" ><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -502,7 +499,7 @@
             <div class="search-close-switch">+</div>
             <form class="search-model-form">
                 <input type="text" id="search-input" placeholder="Giày giá rẻ">
-                <a href="./shop.html" class="cart-btn"><span class="icon_bag_alt"></span> Tìm</a>
+                <a href="shop.html" class="cart-btn"><span class="icon_bag_alt"></span>Tìm</a>
             </form>
         </div>
     </div>
@@ -519,6 +516,8 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+
 </body>
 
 </html>

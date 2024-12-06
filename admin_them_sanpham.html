@@ -117,18 +117,39 @@
                         <div class="card form-border rounded-5 p-3" style="border-radius: 5px;">
     
                             <form>
-                                <div class="mb-3">
-                                    <button type="button" class="btn btn-secondary" onclick="document.getElementById('imageUpload').click()">
-                                        Chọn ảnh
+                                <div class="mb-3" style="display: flex; align-items: center;">  
+                                    <button type="button" class="btn btn-secondary mt-2" onclick="document.getElementById('imageUpload1').click()">
+                                        Chọn ảnh 1
                                     </button>
-                                    <input type="file" id="imageUpload" accept="image/*" onchange="previewImage(event)" style="display: none;">
+                                    <input type="file" id="imageUpload1" accept="image/*" onchange="previewImage(event, 'fileName1')" style="display: none;">
+                                    <!-- Phần tử hiển thị tên file -->
+                                    <div id="fileName1" class="mt-2" style="display: inline-block; margin-left: 10px;"></div>
                                 </div>
+
+                                <div class="mb-3" style="display: flex; align-items: center;">  
+                                    <button type="button" class="btn btn-secondary mt-2" onclick="document.getElementById('imageUpload2').click()">
+                                        Chọn ảnh 2
+                                    </button>
+                                    <input type="file" id="imageUpload2" accept="image/*" onchange="previewImage(event, 'fileName2')" style="display: none;">
+                                    <!-- Phần tử hiển thị tên file -->
+                                    <div id="fileName2" class="mt-2" style="display: inline-block; margin-left: 10px;"></div>
+                                </div>
+
+                                <div class="mb-3" style="display: flex; align-items: center;">  
+                                    <button type="button" class="btn btn-secondary mt-2" onclick="document.getElementById('imageUpload3').click()">
+                                        Chọn ảnh 3
+                                    </button>
+                                    <input type="file" id="imageUpload3" accept="image/*" onchange="previewImage(event, 'fileName3')" style="display: none;">
+                                    <!-- Phần tử hiển thị tên file -->
+                                    <div id="fileName3" class="mt-2" style="display: inline-block; margin-left: 10px;"></div>
+                                </div>
+                                
     
                                 <!-- Khu vực hiển thị ảnh -->
-                                <div id="imagePreviewContainer" class="mt-4 mb-4 d-flex flex-column align-items-center text-center">
+                                <!-- <div id="imagePreviewContainer" class="mt-4 mb-4 d-flex flex-column align-items-center text-center">
                                     <p>Ảnh bạn đã chọn:</p>
                                     <img id="imagePreview" class="img-thumbnail" style="max-width: 300px;" src="/img/default_avatar.png">
-                                </div>
+                                </div> -->
     
                                 <div class="form-group mb-4">
                                     <label for="nameInput">Tên sản phẩm</label>
@@ -150,6 +171,26 @@
                                             <input class="form-control form-control-custom form-border font_black" type="number" id="numberInput" placeholder="Nhập số lượng">
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group mb-4">
+                                            <div class="mb-3">
+                                                <label for="multiLineText" class="form-label">Chi tiết sản phẩm</label>
+                                                <textarea id="multiLineText" class="form-control form-border font_black" rows="4" placeholder="Nhập văn bản tại đây..."></textarea>
+                                            </div>                                                    
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group mb-4">
+                                            <div class="mb-3">
+                                                <label for="multiLineText" class="form-label">Thông tin chi tiết</label>
+                                                <textarea id="multiLineText" class="form-control form-borde font_black" rows="4" placeholder="Nhập văn bản tại đây..."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
         
                                 <div class="mb-3">
@@ -199,24 +240,15 @@
 
 
 
-
-
-
-
 <script>
-    function previewImage(event) {
-        const file = event.target.files[0]; // Lấy file người dùng chọn
+     function previewImage(event,fileID) {
+        var file = event.target.files[0]; // Lấy file đầu tiên được chọn
         if (file) {
-            const preview = document.getElementById('imagePreview');
-            const previewContainer = document.getElementById('imagePreviewContainer');
-            
-            preview.src = URL.createObjectURL(file); // Tạo URL tạm cho ảnh
+            console.log(fileID);
+            document.getElementById(fileID).textContent = 'Tên file: ' + file.name; // Hiển thị tên file
         }
     }
 </script>
-
-
-
 
 
 <!-- Js Plugins -->
