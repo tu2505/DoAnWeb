@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/index.css" type="text/css">
-    <link rel="stylesheet" href="css/admin_nguoidung.css" type="text/css">
+    <link rel="stylesheet" href="css/admin_sanpham.css" type="text/css">
     
 </head>
 
@@ -96,12 +96,12 @@
             <aside class="col-2 p-3" style="background-color: #f8f9fa;">
                 <div class="navMenu">
                     <div class="navMenu">
-                        <h5><a href="admin_sanpham_1.html" class="navMenu-item">Quản lý sản phẩm</a></h5>
-                        <h5><a href="admin_donhang.html" class="navMenu-item" >Quản lý đơn hàng</a></h5>
-                        <h5><a href="admin_nguoidung_1.html" class="navMenu-item" style="background-color: rgb(218, 218, 218); /* Màu nền khi hover */
+                        <h5><a href="/admin_sanpham_1.html" class="navMenu-item"style="background-color: rgb(218, 218, 218); /* Màu nền khi hover */
                             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                             color: black;
-                            font-weight: 600;">Quản lý người dùng</a></h5>
+                            font-weight: 600;">Quản lý sản phẩm</a></h5>
+                        <h5><a href="admin_donhang.html" class="navMenu-item" >Quản lý đơn hàng</a></h5>
+                        <h5><a href="admin_nguoidung_1.html" class="navMenu-item">Quản lý người dùng</a></h5>
                         <h5><a href="admin_thongkesanpham.html" class="navMenu-item">Thống kê sản phẩm</a></h5>
                         <h5><a href="admin_thongkenguoidung.html" class="navMenu-item">Thống kê khách hàng</a></h5>
                     </div>
@@ -110,22 +110,23 @@
     
             <!-- Main Content -->
             <div class="col-10">
-                <h1 class="d-flex justify-content-center align-items-center mb-5 mt-3">Quản Lý Người Dùng</h1>
+                <h1 class="d-flex justify-content-center align-items-center mb-5 mt-3">Quản Lý Sản Phẩm</h1>
                 
 
                 <div class="row mb-3">
                     <!-- Cột bên trái -->
                     <div class="col-3 d-flex justify-content-start align-items-center">
-                        <div class="btn btn-success">
+                        <a href="admin_them_sanpham.html" class="btn btn-success">
                             Thêm
-                        </div>
+                        </a>
+                        
                     </div>
                 
                     <!-- Cột bên phải -->
                     <div class="col-9 d-flex justify-content-end">
                         <div class="search">
-                            <input placeholder="Tìm kiếm ..."></input>
-                            <a href="admin_searchtennguoidung.html" class="icon-link">
+                            <input placeholder="Tìm kiếm ..." value="Adidas"></input>
+                            <a href="admin_sanpham_1.html" class="icon-link">
                                 <i class="icon_search"></i>
                             </a>
                         </div>
@@ -140,44 +141,47 @@
                 <thead>
                     <tr>
                         <th>STT</th>
-                        <th>Tên</th>
-                        <th>Email</th>
-                        <th>Số điện thoại</th>
-                        <th>Địa chỉ</th>
-                        <th>Chức vụ</th>
-                        <th>Thao tác</th>
-                        <th>Khóa</th>
+                        <th>Hình Ảnh</th>
+                        <th>Sản Phẩm</th>
+                        <th>Hãng</th>
+                        <th>Giá</th>
+                        <th>Số Lượng</th>
+                        <th>Mô tả</th>
+                        <th>Thao Tác</th>
                     </tr>
                 </thead>
                 <tbody id="row1">
                     <tr>
                         <td>1</td>
-                        <td class="font-bold">Nguyễn Văn C</td>
-                        <td>nguyenvanc@gmail.com</td>
-                        <td>0123485539</td>
-                        <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
-                        <td>Admin</td>
-                        <td><button class="btn btn-primary">Sửa</button>
+                        <td><image src="img/adidas/shop-1.jpg" class="itemImage mr-3"></image></td>
+                        <td class="font-bold">Adidas Supernova Rise</td>
+                        <td>Adidas</td>
+                        <td class="font-red">3.800.000 VNĐ</td>
+                        <td><div style="margin-left: 25px;">50</div></td>
+                        <td>Được trang bị đệm êm ái, phần đế ngoài bền bỉ,hiệu suất cao.
+                            Giày thể thao hiện đại với thiết kế năng động và phong cách.</td>
+                        <td><a href="admin_sua_sanpham.html" class="btn btn-primary">Sửa</a>
                             <button class="btn btn-danger" onclick="confirmDelete('row1')">Xóa</button>
                         </td>
-                        <td> <input type="checkbox" id="exampleCheck1" class="ml-3" onclick="confirmCheck(event)"></td>
                     </tr>
                     
                 </tbody>
 
+
                 <tbody id="row2">
                     <tr>
                         <td>2</td>
-                        <td class="font-bold">Nguyễn Văn B</td>
-                        <td>nguyenvana@gmail.com</td>
-                        <td>0123485999</td>
-                        <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
-                        <td>Nhân viên</td>
-                        <td><button class="btn btn-primary">Sửa</button>
+                        <td><image src="img/nike/shop-10.jpg" class="itemImage mr-3"></image></td>
+                        <td class="font-bold">Nike Quest 5 Men's Road Running Shoes</td>
+                        <td>Nike</td>
+                        <td class="font-red">4.409.000 VNĐ</td>
+                        <td><div style="margin-left: 25px;">50</div></td>
+                        
+                        <td>Được trang bị đệm êm ái, phần đế ngoài bền bỉ,hiệu suất cao.
+                            Giày thể thao hiện đại với thiết kế năng động và phong cách.</td>
+                        <td><a href="admin_sua_sanpham.html" class="btn btn-primary">Sửa</a>
                             <button class="btn btn-danger" onclick="confirmDelete('row2')">Xóa</button>
-                            
                         </td>
-                        <td> <input type="checkbox" id="exampleCheck1" class="ml-3" onclick="confirmCheck(event)"></td>
                     </tr>
                     
                 </tbody>
@@ -185,29 +189,27 @@
                 <tbody id="row3">
                     <tr>
                         <td>3</td>
-                        <td class="font-bold">Nguyễn Văn A</td>
-                        <td>nguyenvana@gmail.com</td>
-                        <td>0123485999</td>
-                        <td>Đường Huỳnh Tấn Phát, Phường Tân Thuận Đông, Quận 7</td>
-                        <td>Người dùng</td>
-                        <td><button class="btn btn-primary">Sửa</button>
+                        <td><image src="img/adidas/shop-2.jpg" class="itemImage mr-3"></image></td>
+                        <td class="font-bold">Adidas Ultraboost</td>
+                        <td>Adidas</td>
+                        <td class="font-red">4.000.000 VNĐ</td>
+                        <td><div style="margin-left: 25px;">50</div></td>
+                        <td>Được trang bị đệm êm ái, phần đế ngoài bền bỉ,hiệu suất cao.
+                            Giày thể thao hiện đại với thiết kế năng động và phong cách.</td>
+                        <td><a href="admin_sua_sanpham.html" class="btn btn-primary">Sửa</a>
                             <button class="btn btn-danger" onclick="confirmDelete('row3')">Xóa</button>
                         </td>
-                        <td> <input type="checkbox" id="exampleCheck1" class="ml-3" onclick="confirmCheck(event)"></td>
                     </tr>
                     
                 </tbody>
-
-
-                
 
             </table>
 
             <div class="col-lg-12 text-center" style="margin-top: 30px;">
                 <div class="pagination__option">
-                    <a href="admin_nguoidung_1.html"><i class="fa fa-angle-left"></i></a>
-                    <a href="admin_nguoidung_1.html">1</a>
-                    <a href="admin_nguoidung_2.html" class="active">2</a>
+                    <a href="admin_sanpham_1.html" class="active">1</a>
+                    <a href="admin_sanpham_2.html">2</a>
+                    <a href="admin_sanpham_2.html"><i class="fa fa-angle-right"></i></a>
                 </div>
 
             </div>
@@ -218,32 +220,7 @@
 
 
 
-    <script>
-        function confirmCheck(event) {
-            const checkbox = event.target;
 
-            // Lấy trạng thái trước khi nhấp
-            const isCurrentlyChecked = !checkbox.checked;
-            console.log("Trạng thái trước khi nhấp:", isCurrentlyChecked);
-
-            // Hiển thị dialog xác nhận
-            const action = isCurrentlyChecked
-                ? "Bạn có muốn mở khóa người dùng này?"
-                : "Bạn có muốn khóa người dùng này?";
-            const isConfirmed = confirm(action);
-
-            if (isConfirmed) {
-                // Nếu người dùng đồng ý, trạng thái sẽ thay đổi bình thường
-                checkbox.checked = !isCurrentlyChecked;
-                alert(isCurrentlyChecked ? "Mở khóa thành công!" : "Khóa thành công!");
-            } else {
-                // Ngăn checkbox thay đổi trạng thái
-                event.preventDefault();
-                alert("Hủy bỏ thành công!");
-            }
-        }
-
-    </script>
 
 
 
@@ -264,7 +241,7 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/admin.js"></script>
+<script src="/js/admin.js"></script>
 
 </body>
 
